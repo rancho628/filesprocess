@@ -6,6 +6,8 @@ import legalfiles.processtext.cutandremove
 import legalfiles.processtext.freqword
 import legalfiles.processtext.featureword
 
+from operator import itemgetter
+
 def processFile():
     # 转换文件为txt
     rootDir = "C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\files"
@@ -26,9 +28,15 @@ def processFile():
         # 词频统计
         fdist,words = legalfiles.processtext.freqword.nltk_wf_feature(content)
         print('=' * 3, '统计词频', '=' * 3)
-        print(words[0])
-        #print('=' * 3, '10个最高频率词', '=' * 3)
+        content_nocov = list(set(content))
+        word_fre={}
+        for cv in content_nocov:
+            word_fre[cv]=words[cv]
+        sorted_word_fre=sorted(word_fre.items(),key=itemgetter(1),reverse=True)
+        print(sorted_word_fre)
+        print('=' * 3, '10个最高频率词', '=' * 3)
         #fdist.tabulate(10)  # 频率分布表
+        print(sorted_word_fre[0:10])
 
 
 
