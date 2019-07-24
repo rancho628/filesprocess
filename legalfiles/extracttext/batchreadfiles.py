@@ -35,7 +35,7 @@ class loadFiles(object):
                 #print(file_path)
                 if os.path.isfile(file_path):
                     this_file = open(file_path, 'rb')  # rb读取方式更快
-                    content = this_file.read().decode('utf-8')
+                    content = this_file.read().decode('gbk')
                     yield content
                     this_file.close()
 

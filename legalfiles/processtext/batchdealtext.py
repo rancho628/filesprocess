@@ -58,6 +58,9 @@ def processFile():
         print('=' * 3, '提取人名地方名等', '=' * 3)
         print(featWord)
 
+        #视图要什么就返回什么到视图
+        return wordlist
+
 
 if __name__=='__main__':
     processFile()
