@@ -58,6 +58,8 @@ def freqword(fdist):
 
 
 
+
+
 if __name__=='__main__':
     # 1 读取文本
     path= r'../'

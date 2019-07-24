@@ -26,10 +26,11 @@ def processFile():
         # 词频统计
         fdist,words = legalfiles.processtext.freqword.nltk_wf_feature(content)
         print('=' * 3, '统计词频', '=' * 3)
-        print(words.keys())
-        print(words.values())
-        print('=' * 3, '10个最高频率词', '=' * 3)
-        print(fdist.tabulate(10))  # 频率分布表
+        print(list(words))
+        #print('=' * 3, '10个最高频率词', '=' * 3)
+        #fdist.tabulate(10)  # 频率分布表
+
+
 
         #去重复
         content_nocov=list(set(content))
