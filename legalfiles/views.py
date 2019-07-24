@@ -32,7 +32,8 @@ def to_process(request):
 
 def process_file(request):
     # if request.method == "POST":
-    wordlist = legalfiles.processtext.batchdealtext.processFile()
+    wordlists,featWords = legalfiles.processtext.batchdealtext.processFile()
     return render(request, 'processfiles.html', {
-          'wordlist': wordlist
+          'wordlists': wordlists,
+           'featWords':featWords
     })

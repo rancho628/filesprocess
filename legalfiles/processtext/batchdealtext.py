@@ -18,6 +18,10 @@ def processFile():
     filepath = os.path.abspath('C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\files2txt')
     files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
 
+    #要返回给view的变量
+    featWords = {}
+    wordlists = {}
+
     #对txt遍历分词
     for i,content in enumerate(files):
         #分词
@@ -52,14 +56,17 @@ def processFile():
         wordlist = legalfiles.processtext.freqword.freqword(fdist)
         print('=' * 3, '打印词频在2~15的词', '=' * 3)
         print(wordlist)
+        wordlists.update(wordlist)
 
         #提取特征词
         featWord=legalfiles.processtext.featureword.extract_feature_words(content,flag)
         print('=' * 3, '提取人名地方名等', '=' * 3)
         print(featWord)
+        featWords.update(featWord)
 
-        #视图要什么就返回什么到视图
-        return wordlist
+    # 视图要什么就返回什么到视图
+    print(wordlists)
+    return wordlists,featWords
 
 
 if __name__=='__main__':
