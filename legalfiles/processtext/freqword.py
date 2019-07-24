@@ -51,7 +51,7 @@ def nltk_wf_feature(word_list=None):
 def freqword(fdist):
     wordlist ={}
     for key in fdist.keys():
-        if fdist.get(key)>2 and fdist.get(key)<15:
+        if fdist.get(key)>2 :
             wordlist[key]=fdist.get(key)
     return wordlist
 
