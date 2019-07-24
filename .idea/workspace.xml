@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -25,18 +26,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/nltk/probability.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="2354" selection-start-line="2354" selection-end-line="2360" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="703">
               <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
             </state>
           </provider>
@@ -45,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/processtext/freqword.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="361">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="17" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -57,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
+            <state relative-caret-position="4085">
               <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
             </state>
           </provider>
@@ -66,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/processtext/featureword.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="380">
               <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
                 <element signature="e#50#75#0" expanded="true" />
@@ -75,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="408">
+              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
               <folding>
                 <element signature="e#60#77#0" expanded="true" />
               </folding>
@@ -90,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/processtext/cutandremove.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="342">
               <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding>
                 <element signature="e#65#84#0" expanded="true" />
@@ -111,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchconv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1554">
+            <state relative-caret-position="1406">
               <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
               <folding>
                 <element signature="e#53#97#0" expanded="true" />
@@ -165,21 +157,21 @@
         <option value="$PROJECT_DIR$/legalfiles/templates/processfiles.html" />
         <option value="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" />
         <option value="$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py" />
-        <option value="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" />
         <option value="$PROJECT_DIR$/legalfiles/processtext/featureword.py" />
         <option value="$PROJECT_DIR$/legalfiles/templates/js/dw.js" />
         <option value="$PROJECT_DIR$/legalfiles/templates/js/fdf.js" />
         <option value="$USER_HOME$/Anaconda3/Lib/site-packages/nltk/probability.py" />
         <option value="$PROJECT_DIR$/legalfiles/processtext/freqword.py" />
         <option value="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" />
+        <option value="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1728" />
-    <option name="height" value="1850" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="46" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -187,16 +179,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="filesprocess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filesprocess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
               <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -233,13 +221,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -273,6 +261,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LegalFiles/ExtractText/BatchConv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -294,6 +283,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LegalFiles/ProcessText/BatchDealText.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -315,6 +305,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LegalFiles/ExtractText/Conv2Txt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -336,6 +327,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -357,6 +349,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LegalFiles/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -386,8 +379,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563715221279</updated>
+      <workItem from="1563971230149" duration="62000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="62000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,12 +396,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1933" height="1053" extended-state="6" />
+    <frame x="46" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.104792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10596379" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4997367" visible="true" weight="0.44312027" />
@@ -416,10 +415,15 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" weight="0.16468039" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002633" side_tool="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -462,13 +466,7 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/importlib/__init__.py" />
     <entry file="file://$PROJECT_DIR$/legalfiles/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -487,28 +485,10 @@
     <entry file="file://$PROJECT_DIR$/legalfiles/need/stopword.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/os.py" />
     <entry file="file://$PROJECT_DIR$/LegalFiles/templates/finished.html" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/win32com/client/dynamic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/win32com/client/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/win32com/client/dynamic.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/win32com/client/__init__.py" />
     <entry file="file://$PROJECT_DIR$/filesprocess/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -529,13 +509,7 @@
     <entry file="file://$PROJECT_DIR$/legalfiles/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/django_introduction/blog/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/django_introduction/blog/apps.py" />
     <entry file="file://$PROJECT_DIR$/filesprocess/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
@@ -637,11 +611,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/Tencent Files/1017833827/FileRecv/conv2txt.py" />
+    <entry file="file://$PROJECT_DIR$/../../Tencent Files/1017833827/FileRecv/conv2txt.py" />
     <entry file="file://$USER_HOME$/Desktop/conv2txt.py" />
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/fdf.js" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/nltk/probability.py" />
+    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/freqword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4085">
+          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/legalfiles/processtext/featureword.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="380">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
             <element signature="e#50#75#0" expanded="true" />
@@ -649,12 +659,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py">
+    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/cutandremove.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
-            <element signature="e#60#77#0" expanded="true" />
+            <element signature="e#65#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -666,16 +676,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/fdf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchconv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1554">
+        <state relative-caret-position="1406">
           <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
           <folding>
             <element signature="e#53#97#0" expanded="true" />
@@ -683,53 +686,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/cutandremove.py">
+    <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="408">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
           <folding>
-            <element signature="e#65#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/nltk/probability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="2354" selection-start-line="2354" selection-end-line="2360" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/freqword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#60#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
