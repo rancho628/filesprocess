@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/legalfiles/files/中国平安财产保险股份有限公司中山中心支公司诉寇含奎机动车交通事故责任纠纷二审民事判决书 (1).docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/files/平安银行股份有限公司中山分行与王声郁金融借款合同纠纷一审民事判决书.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/files/2019暨大信科院复试名单.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/files2Txt/2019暨大信科院复试名单.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/freqword.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/freqword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/saveobject/savetxt.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/saveobject/savetxt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/processfiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/processfiles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/templates/upload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-483">
+            <state relative-caret-position="-763">
               <caret line="13" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -46,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+            <state relative-caret-position="455">
+              <caret line="30" column="92" lean-forward="true" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -132,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/templates/processfiles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="13" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="1575">
+              <caret line="75" column="73" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -200,14 +185,14 @@
         <option value="$PROJECT_DIR$/legalfiles/saveobject/savetxt.py" />
         <option value="$PROJECT_DIR$/legalfiles/models.py" />
         <option value="$PROJECT_DIR$/legalfiles/urls.py" />
-        <option value="$PROJECT_DIR$/legalfiles/templates/detail.html" />
         <option value="$PROJECT_DIR$/legalfiles/views.py" />
-        <option value="$PROJECT_DIR$/legalfiles/templates/processfiles.html" />
         <option value="$PROJECT_DIR$/legalfiles/templates/upload.html" />
+        <option value="$PROJECT_DIR$/legalfiles/templates/detail.html" />
+        <option value="$PROJECT_DIR$/legalfiles/templates/processfiles.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1674" />
     <option name="width" value="2116" />
     <option name="height" value="2086" />
@@ -446,9 +431,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="954" y="0" width="971" height="1045" extended-state="0" />
+    <frame x="-7" y="-7" width="1933" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21237993" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.104792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,7 +445,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997367" weight="0.20910075" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49921012" weight="0.219935" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" visible="true" weight="0.90054643" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" visible="true" weight="0.17984831" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007899" side_tool="true" weight="0.31744313" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -786,17 +772,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/templates/detail.html">
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/templates/processfiles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="13" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="-763">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -804,10 +783,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/templates/upload.html">
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="455">
+          <caret line="30" column="92" lean-forward="true" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/processfiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="75" column="73" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
