@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/legalfiles/files2Txt/北京博隆盛工贸有限公司上诉北京市顺义区人力资源和社会保障局其他二审行政判决书.txt" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/files2Txt/北京博隆盛工贸有限公司上诉北京市顺义区人力资源和社会保障局其他二审行政判决书.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +42,20 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
               <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/sb.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -114,6 +122,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/legalfiles/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -700,8 +709,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/sb.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
