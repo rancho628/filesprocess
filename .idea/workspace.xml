@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/files2Txt/倪利刚与马北明合伙协议纠纷一审民事判决书.txt" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/files2Txt/倪利刚与马北明合伙协议纠纷一审民事判决书.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/files2Txt/北京博隆盛工贸有限公司上诉北京市顺义区人力资源和社会保障局其他二审行政判决书.txt" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/files2Txt/北京博隆盛工贸有限公司上诉北京市顺义区人力资源和社会保障局其他二审行政判决书.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/cutandremove.py" afterDir="false" />
-
-    </list>
+    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="132">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -42,20 +34,13 @@
           </provider>
         </entry>
       </file>
-
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/batchreadfiles.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
               <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/sb.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -122,7 +107,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-
         <entry file="file://$PROJECT_DIR$/legalfiles/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -398,12 +382,12 @@
       <option name="presentableId" value="Default" />
       <updated>1563715221279</updated>
       <workItem from="1563971230149" duration="62000" />
-      <workItem from="1564030510413" duration="72000" />
+      <workItem from="1564030510413" duration="421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134000" />
+    <option name="totallyTimeSpent" value="483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,20 +400,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10596379" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49921012" visible="true" weight="0.25492227" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" weight="0.25492227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997367" weight="0.20910075" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49921012" weight="0.19934994" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" weight="0.53954494" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" visible="true" weight="0.5388601" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007899" side_tool="true" weight="0.31744313" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -568,13 +551,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/dw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/legalfiles/templates/js/dw.js" />
     <entry file="file://$PROJECT_DIR$/legalfiles/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -690,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="132">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -709,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-
         </state>
       </provider>
     </entry>
