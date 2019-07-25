@@ -17,12 +17,7 @@ jieba.load_userdict(data_dictfile_path)
 #********************1 结巴中文分词***********************************
 
 # 清洗，然后利用jieba对文本进行分词，再去除停用词，返回切词后的list
-def seg_doc(str_doc):
-    # 1 按段切原文本
-    sent_list = str_doc.split('\n')
-    print('=' * 3, '原文本按段切割后', '=' * 3)
-    print(sent_list)
-
+def seg_doc(sent_list):
 
     # map内置高阶函数:一个函数f和list，函数f依次作用在list.
     # 正则处理，去掉一些字符，例如\u3000

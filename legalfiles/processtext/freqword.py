@@ -24,7 +24,7 @@ def nltk_wf_feature(word_list=None):
     fdist=FreqDist(word_list)
     words=Counter(word_list)
 
-    return fdist,words
+    return words,fdist
 
     # print('=' * 3, '统计词频', '=' * 3)
     # print(Words.keys(), '\n', Words.values())
