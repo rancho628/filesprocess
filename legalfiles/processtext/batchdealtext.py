@@ -10,12 +10,11 @@ from operator import itemgetter
 
 def processFile():
     # 转换文件为txt
-    rootDir = "C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\files"
+    rootDir = "..\\files"
     tra = legalfiles.extracttext.batchconv.TraversalFun(rootDir, ET.Files2Txt)  # 默认方法参数打印所有文件路径
     tra.ReadyTraversal()  # 遍历文件并进行相关操作
 
     #读取txt
-    filepath = os.path.abspath('C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\files2txt')
     filepath = os.path.abspath('..\\files2txt')
     files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
 

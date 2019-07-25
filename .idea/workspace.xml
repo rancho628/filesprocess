@@ -116,6 +116,7 @@
         <entry file="file://$PROJECT_DIR$/legalfiles/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
