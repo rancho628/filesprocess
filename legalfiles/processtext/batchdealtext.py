@@ -12,13 +12,16 @@ from config2 import data_file_path
 def processFile():
     # 转换文件为txt
     rootDir = data_file_path
-    print(rootDir)
+    #print(rootDir)
     tra = legalfiles.extracttext.batchconv.TraversalFun(rootDir, ET.Files2Txt)  # 默认方法参数打印所有文件路径
     tra.ReadyTraversal()  # 遍历文件并进行相关操作
 
     #读取txt
     filepath = os.path.abspath(data_txtfile_path)
     files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
+    #把txt弄成一个个对象保存到数据库
+
+
 
     #要返回给view的变量
     featWords = {}
