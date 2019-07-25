@@ -4,13 +4,14 @@
 DESC:自定义去停用词
 Prompt: code in Python3 env
 """
-
+import os
 import re,jieba,sys
 import jieba.posseg as ps
-
+from config2 import data_dictfile_path
+from config2 import data_stopfile_path
 
 # 加载自定义分词词典
-jieba.load_userdict("C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\need\\dict.txt.big")
+jieba.load_userdict(data_dictfile_path)
 
 
 #********************1 结巴中文分词***********************************
@@ -64,7 +65,7 @@ def textParse(str_doc):
 
 
 # 创建停用词列表
-def get_stop_words(path='C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\need\\NLPIR_stopwords.txt'):
+def get_stop_words(path=data_stopfile_path):
     file = open(path, 'r',encoding='utf-8').read().split('\n')
     return set(file)
 

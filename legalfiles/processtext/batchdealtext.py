@@ -5,22 +5,20 @@ import legalfiles.extracttext.conv2txt as ET
 import legalfiles.processtext.cutandremove
 import legalfiles.processtext.freqword
 import legalfiles.processtext.featureword
-
+from config2 import data_txtfile_path
 from operator import itemgetter
+from config2 import data_file_path
 
 def processFile():
     # 转换文件为txt
-    rootDir = "..\\files"
+    rootDir = data_file_path
+    print(rootDir)
     tra = legalfiles.extracttext.batchconv.TraversalFun(rootDir, ET.Files2Txt)  # 默认方法参数打印所有文件路径
     tra.ReadyTraversal()  # 遍历文件并进行相关操作
 
     #读取txt
-    filepath = os.path.abspath('..\\files2txt')
+    filepath = os.path.abspath(data_txtfile_path)
     files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
-
-    #要返回给view的变量
-    featWords = {}
-    wordlists = {}
 
     #对txt遍历分词
     for i,content in enumerate(files):
@@ -54,23 +52,17 @@ def processFile():
 
         #打印指定词频范围的词
         wordlist = legalfiles.processtext.freqword.freqword(fdist)
-        print('=' * 3, '打印词频在2以上的词', '=' * 3)
+        print('=' * 3, '打印词频在2~15的词', '=' * 3)
         print(wordlist)
-        wordlists.update(wordlist)
 
         #提取特征词
         featWord=legalfiles.processtext.featureword.extract_feature_words(content,flag)
         print('=' * 3, '提取人名地方名等', '=' * 3)
         print(featWord)
-        featWords.update(featWord)
-
-    # 视图要什么就返回什么到视图
-    return wordlists,featWords
 
 
 if __name__=='__main__':
     processFile()
-    print(os.path.abspath('..\\files2txt'))
 
 
 
