@@ -28,7 +28,7 @@ def Files2Txt(filePath,savePath=''):
         # 2 修改转化后的文件名
         typename = os.path.splitext(filename)[-1].lower() # 获取后缀
         new_name = TranType(filename,typename) #根据后缀不同切了后缀
-        print('新的文件名：',new_name)
+        #print('新的文件名：',new_name)
 
         # 3 文件转化后的保存路径
         if savePath=="":
@@ -36,7 +36,7 @@ def Files2Txt(filePath,savePath=''):
         else:
             savePath = savePath
         new_save_path = os.path.join(savePath,new_name)
-        print('保存路径：',new_save_path)
+        #print('保存路径：',new_save_path)
 
 
         # 4 加载处理应用，根据保存路径进行保存
