@@ -56,7 +56,7 @@ def processFile():
 
         #打印指定词频范围的词
         wordlist = legalfiles.processtext.freqword.freqword(fdist)
-        print('=' * 3, '打印词频在2~15的词', '=' * 3)
+        print('=' * 3, '打印词频在5~15的词', '=' * 3)
         print(wordlist)
         wordlists.update(wordlist)
 
