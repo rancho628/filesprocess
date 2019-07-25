@@ -16,6 +16,7 @@ def processFile():
 
     #读取txt
     filepath = os.path.abspath('C:\\Users\\rancho\\PycharmProjects\\filesprocess\\legalfiles\\files2txt')
+    filepath = os.path.abspath('..\\files2txt')
     files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
 
     #要返回给view的变量
@@ -70,6 +71,7 @@ def processFile():
 
 if __name__=='__main__':
     processFile()
+    print(os.path.abspath('..\\files2txt'))
 
 
 
