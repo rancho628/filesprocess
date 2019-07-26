@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from legalfiles.models import Txt
 # Create your views here.
 from django.http import HttpResponse
 import os
@@ -33,7 +33,44 @@ def to_process(request):
 def process_file(request):
     # if request.method == "POST":
     wordlists,featWords = legalfiles.processtext.batchdealtext.processFile()
+
+    txts = Txt.objects.all()
+
     return render(request, 'processfiles.html', {
           'wordlists': wordlists,
-           'featWords':featWords
+           'featWords':featWords,
+           'txts':txts
     })
+
+def get_detail_page(request, txt_id):
+    all_txt = Txt.objects.all()
+    curr_txt = None
+    previous_index = 0
+    next_index = 0
+    previous_txt = None
+    next_txt= None
+    for index, txt in enumerate(all_txt):
+        if index == 0:
+            previous_index = 0
+            next_index = index + 1
+        elif index == len(all_txt) - 1:
+            previous_index = index - 1
+            next_index = index
+        else:
+            previous_index = index - 1
+            next_index = index + 1
+        if txt.txt_id == txt_id:
+            curr_txt= txt
+            previous_txt = all_txt[previous_index]
+            next_txt= all_txt[next_index]
+            break
+
+    section_list = curr_txt.content.split('\n')
+    return render(request, 'detail.html',
+                  {
+                      'curr_txt': curr_txt,
+                      'section_list': section_list,
+                      'previous_txt': previous_txt,
+                      'next_txt': next_txt
+                  }
+                  )

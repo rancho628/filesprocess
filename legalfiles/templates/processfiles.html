@@ -11,10 +11,10 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <style>
-body
-{
-	background-color:#d0e4fe;
-}
+<!--body-->
+<!--{-->
+<!--	background-color:#d0e4fe;-->
+<!--}-->
 p
 {
 	font-family:"Times New Roman";
@@ -49,7 +49,7 @@ p
             <div class="panel-body" style="height: 700px; overflow-y:scroll">
                 <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
                     <div class="sidebar">
-                        <p>菜单内容</p>
+                        <p>标签</p>
                         <ul class="nav">
                             {% for wl in wordlists %}
                             <li> {{wl}}</li>
@@ -71,7 +71,10 @@ p
     </div>
     <div class="col-md-10" role="complementary">
         <div>
-
+            <h2>相关文本结果：</h2>
+            {% for t in txts %}
+            <h4><a href="/legalfiles/detail/{{t.txt_id}}" target="_blank">{{ t.title }}</a></h4>
+            {% endfor %}
         </div>
     </div>
 </div>
