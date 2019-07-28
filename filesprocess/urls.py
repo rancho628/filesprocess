@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 import legalfiles
+from django.conf.urls import url
+
+import haystack.urls
 
 
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
     path('legalfiles/', include('legalfiles.urls'),name='legalfiles'),
+    url(r'^search/', include('haystack.urls')),
 ]

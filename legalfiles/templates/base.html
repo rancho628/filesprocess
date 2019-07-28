@@ -23,6 +23,7 @@
 
 
 
+
     </style>
 
     <!-- js -->
@@ -37,6 +38,7 @@
     function toprocess(){
         window.open ("../to_process", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
+
 
     </script>
 </head>
@@ -64,12 +66,11 @@
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
-                <div id="header-search-box">
-                    <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
-                    <div id="search-form" class="search-form">
-                        <form role="search" method="get" id="searchform" action="">
+                <div>
+                    <div >
+                        <form role="search" method="get" action="/search/">
                             <input type="search" name="q" placeholder="搜索" required>
-                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                            <button type="submit">查询</button>
                         </form>
                     </div>
                 </div>

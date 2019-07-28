@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 
 {% block main %}
+<h1>相关文本结果：</h1>
+{% for t in txts %}
+<article class="">
+    <header class="entry-header">
 
-    <article class="">
-        <header class="entry-header">
-            <h1>相关文本结果：</h1>
-            {% for t in txts %}
-            <h6 class="entry-title">
-                <a href="/legalfiles/detail/{{t.txt_id}}" target="_blank">{{ t.title }}</a>
-            </h6>
-            {% endfor %}
-        </header>
-    </article>
+        <h6 class="entry-title">
+            <a href="/legalfiles/detail/{{t.txt_id}}" target="_blank">{{ t.title }}</a>
+        </h6>
 
+    </header>
+    <div class="entry-content clearfix">
+        <p>摘要：{{ t.content|truncatechars:154 }}</p>
+        <div class="read-more cl-effect-14">
+
+        </div>
+    </div>
+</article>
+{% endfor %}
 
 {% endblock main %}
