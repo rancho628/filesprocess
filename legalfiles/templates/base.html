@@ -1,0 +1,126 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--    <title>Black &amp; White</title>-->
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/highlights/github.css' %}">
+
+    <style>
+        span.highlighted {
+            color: red;
+        }
+
+
+
+
+    </style>
+
+    <!-- js -->
+    <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/pace.min.js' %}"></script>
+    <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+    <script>
+    function toupload(){
+        window.open ("../to_upload", "上传文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+    }
+    function toprocess(){
+        window.open ("../to_process", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+    }
+
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="#"><b>文本</b> 处理</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cl-effect-11"><a href="" onclick="toupload()" data-hover="上传">上传</a></li>
+                            <li class="cl-effect-11"><a href="" onclick="toprocess()" data-hover="处理">处理</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+                <div>
+                    <div >
+                        <form role="search" method="get" action="/search/">
+                            <input type="search" name="q" placeholder="搜索" required>
+                            <button type="submit">查询</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+
+            <aside class="col-md-3">
+                {% block toc %}
+                {% endblock toc %}
+                <div class="widget widget-tag-cloud">
+                    <div class="panel-body" style="height: 700px; overflow-y:scroll">
+                        <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
+                            <div class="sidebar">
+                                <h3 class="widget-title">标签</h3>
+                                <ul>
+                                    {% for wl in wordlists %}
+                                    <li>
+                                        <a href="">{{wl}}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+            </aside>
+
+            <main class="col-md-9">
+                {% block main %}
+                {% endblock main %}
+            </main>
+
+        </div>
+    </div>
+</div>
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">&copy 2019
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

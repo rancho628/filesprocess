@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<div>
+    <ul>
+      <form enctype="multipart/form-data" method="post" action="/legalfiles/upload_file/">
+            {% csrf_token %}
+            <input type="file" name="myfile" multiple=true/>
+            <input type="submit" value="开始上传"/>
+      </form>
+    </ul>
+</div>
+
+</body>
+</html>

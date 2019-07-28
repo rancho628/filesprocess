@@ -11,14 +11,18 @@ Class-based views
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+    2. Add a URL to urlpatterns:  path('legalfiles/', include('legalfiles.urls'))
 """
 from django.contrib import admin
 from django.urls import path,include
 import legalfiles
+from django.conf.urls import url
+
+import haystack.urls
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'^admin/', admin.site.urls),
     path('legalfiles/', include('legalfiles.urls'),name='legalfiles'),
+    url(r'^search/', include('haystack.urls')),
 ]

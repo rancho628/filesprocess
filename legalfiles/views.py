@@ -7,9 +7,21 @@ import legalfiles.processtext.batchdealtext
 from django.http import HttpResponseRedirect
 
 
-def to_upload(request):
-    return render(request, 'upload.html')
+# def to_upload(request):
+#     return render(request, 'upload.html')
+def index(request):
+    wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
 
+    txts = Txt.objects.all()
+
+    return render(request, 'filesprocess/index.html', {
+        'wordlists': wordlists,
+        'featWords': featWords,
+        'txts': txts
+    })
+
+def to_upload(request):
+    return render(request, 'filesprocess/upload.html')
 
 def upload_file(request):
     # if request.method == "POST":    # 请求方法为POST时，进行处理
@@ -23,24 +35,19 @@ def upload_file(request):
         for chunk in f.chunks():
             destination.write(chunk)
         destination.close()
-    return HttpResponseRedirect('/legalfiles/to_process/')
+    return HttpResponse("上传成功! 请关闭窗口")
 
 
 def to_process(request):
-    return render(request, 'processfiles.html')
+    return render(request, 'filesprocess/processfiles.html')
 
 
 def process_file(request):
     # if request.method == "POST":
-    wordlists,featWords = legalfiles.processtext.batchdealtext.processFile()
+    wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
 
-    txts = Txt.objects.all()
+    return HttpResponse("处理文件成功! 请关闭窗口")
 
-    return render(request, 'processfiles.html', {
-          'wordlists': wordlists,
-           'featWords':featWords,
-           'txts':txts
-    })
 
 def get_detail_page(request, txt_id):
     all_txt = Txt.objects.all()
@@ -48,7 +55,7 @@ def get_detail_page(request, txt_id):
     previous_index = 0
     next_index = 0
     previous_txt = None
-    next_txt= None
+    next_txt = None
     for index, txt in enumerate(all_txt):
         if index == 0:
             previous_index = 0
@@ -60,13 +67,13 @@ def get_detail_page(request, txt_id):
             previous_index = index - 1
             next_index = index + 1
         if txt.txt_id == txt_id:
-            curr_txt= txt
+            curr_txt = txt
             previous_txt = all_txt[previous_index]
-            next_txt= all_txt[next_index]
+            next_txt = all_txt[next_index]
             break
 
     section_list = curr_txt.content.split('\n')
-    return render(request, 'detail.html',
+    return render(request, 'filesprocess/detail.html',
                   {
                       'curr_txt': curr_txt,
                       'section_list': section_list,
