@@ -7,14 +7,12 @@
 <article class="">
     <header class="entry-header">
         <h1 class="entry-title">
-            <a href="/legalfiles/detail/{{result.object.txt_id}}">{% highlight result.object.title with query %}</a>
+            <a href="/legalfiles/detail/{{result.object.txt_id}}" target="_blank">{% highlight result.object.title with query %}</a>
         </h1>
     </header>
     <div class="entry-content clearfix">
-
-        <p>摘要：{% highlight result.object.content with query %}</p>
+        <p>{% highlight result.object.content with query %}</p>
         <div class="read-more cl-effect-14">
-
         </div>
     </div>
 </article>

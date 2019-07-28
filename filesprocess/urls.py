@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 import legalfiles
 from django.conf.urls import url
+from django.http import HttpResponse
 
 import haystack.urls
 
@@ -25,4 +26,5 @@ urlpatterns = [
     path(r'^admin/', admin.site.urls),
     path('legalfiles/', include('legalfiles.urls'),name='legalfiles'),
     url(r'^search/', include('haystack.urls')),
+    url(r'^robots\.txt$', lambda r: HttpResponse('User-agent: *\nDisallow: /', content_type='text/plain')),
 ]

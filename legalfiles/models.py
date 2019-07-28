@@ -5,7 +5,7 @@ class Txt(models.Model):
     # 文章的唯一ID
     txt_id = models.AutoField(primary_key=True)
     # 文章标题
-    title = models.CharField(max_length=70)
+    title = models.TextField()
     # 文章的主要内容
     content = models.TextField()
 

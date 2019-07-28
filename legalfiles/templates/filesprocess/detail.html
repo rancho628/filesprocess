@@ -12,6 +12,14 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div>
+    <nav aria-label="...">
+        <ul class="pager">
+            <li><a href="/legalfiles/detail/{{ previous_txt.txt_id }}">上一篇：{{ previous_txt.title }}</a></li>
+            <li><a href="/legalfiles/detail/{{ next_txt.txt_id }}">下一篇：{{ next_txt.title }}</a></li>
+        </ul>
+    </nav>
+</div>
 <div class="container page-header">
     <h1>{{ curr_txt.title }}
     </h1>
@@ -26,11 +34,11 @@
 </div>
 <div>
     <nav aria-label="...">
-  <ul class="pager">
-    <li><a href="/legalfiles/detail/{{ previous_txt.txt_id }}">上一篇：{{ previous_txt.title }}</a></li>
-    <li><a href="/legalfiles/detail/{{ next_txt.txt_id }}">下一篇：{{ next_txt.title }}</a></li>
-  </ul>
-</nav>
+        <ul class="pager">
+            <li><a href="/legalfiles/detail/{{ previous_txt.txt_id }}">上一篇：{{ previous_txt.title }}</a></li>
+            <li><a href="/legalfiles/detail/{{ next_txt.txt_id }}">下一篇：{{ next_txt.title }}</a></li>
+        </ul>
+    </nav>
 </div>
 
 </body>

@@ -7,8 +7,7 @@ import legalfiles.processtext.batchdealtext
 from django.http import HttpResponseRedirect
 
 
-# def to_upload(request):
-#     return render(request, 'upload.html')
+
 def index(request):
     wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
 
