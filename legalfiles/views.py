@@ -45,7 +45,7 @@ def process_file(request):
     # if request.method == "POST":
     wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
 
-    #return HttpResponse("处理文件成功! 请关闭窗口")
+    return HttpResponse("处理文件成功! 请关闭窗口")
 
 
 def get_detail_page(request, txt_id):
