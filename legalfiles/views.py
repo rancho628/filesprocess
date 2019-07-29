@@ -13,14 +13,14 @@ def index(request):
 
     txts = Txt.objects.all()
 
-    return render(request, 'filesprocess/index.html', {
+    return render(request, 'legalfiles/index.html', {
         'wordlists': wordlists,
         'featWords': featWords,
         'txts': txts
     })
 
 def to_upload(request):
-    return render(request, 'filesprocess/upload.html')
+    return render(request, 'legalfiles/upload.html')
 
 def upload_file(request):
     # if request.method == "POST":    # 请求方法为POST时，进行处理
@@ -38,14 +38,14 @@ def upload_file(request):
 
 
 def to_process(request):
-    return render(request, 'filesprocess/processfiles.html')
+    return render(request, 'legalfiles/processfiles.html')
 
 
 def process_file(request):
     # if request.method == "POST":
     wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
 
-    return HttpResponse("处理文件成功! 请关闭窗口")
+    #return HttpResponse("处理文件成功! 请关闭窗口")
 
 
 def get_detail_page(request, txt_id):
@@ -72,7 +72,7 @@ def get_detail_page(request, txt_id):
             break
 
     section_list = curr_txt.content.split('\n')
-    return render(request, 'filesprocess/detail.html',
+    return render(request, 'legalfiles/detail.html',
                   {
                       'curr_txt': curr_txt,
                       'section_list': section_list,
