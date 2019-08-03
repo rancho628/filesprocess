@@ -1,8 +1,9 @@
 {% load static %}
-
+{% load legalfiles_tags %}
 <!DOCTYPE html>
 <html>
 <head>
+    <title>文本处理</title>
     <!--    <title>Black &amp; White</title>-->
 
     <!-- meta -->
@@ -88,12 +89,10 @@
         </div>
     </header>
 </div>
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
-<div class="copyrights">Modified by <a href="http://zmrenwu.com/">追梦人物的博客</a></div>
+
 <div class="content-body">
     <div class="container">
         <div class="row">
-
             <aside class="col-md-3">
                 {% block toc %}
                 {% endblock toc %}
@@ -102,10 +101,11 @@
                         <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
                             <div class="sidebar">
                                 <h3 class="widget-title">标签</h3>
+                                {% get_tags as tags %}
                                 <ul>
-                                    {% for wl in wordlists %}
+                                    {% for t in tags %}
                                     <li>
-                                        <a href="">{{wl}}</a>
+                                        <a href="">{{t}}</a>
                                     </li>
                                     {% endfor %}
                                 </ul>

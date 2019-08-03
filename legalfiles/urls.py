@@ -10,5 +10,5 @@ urlpatterns=[
     path(r'upload_file/', legalfiles.views.upload_file, name='upload_file'),
     path(r'detail/<int:txt_id>',  legalfiles.views.get_detail_page,name='get_detail_page'),
 
-    path(r'index/',  legalfiles.views.index,name='index')
+    path(r'index/',  legalfiles.views.IndexView.as_view(),name='index')
 ]
