@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/legalfiles/saveobject/savetxttags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filesprocess/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/filesprocess/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/processtext/batchdealtext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/search/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/search/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxt.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
@@ -78,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxttags.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -477,6 +466,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3833" y="-7" width="878" height="1510" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925262" visible="true" weight="0.283848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -864,12 +854,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxttags.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetag.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -881,8 +867,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxttags.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/legalfiles/saveobject/savetxt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
