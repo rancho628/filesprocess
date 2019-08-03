@@ -59,6 +59,7 @@ class Batchdealtext():
             # print('=' * 3, '打印词频在2~15的词', '=' * 3)
             # print(wordlist)
             Batchdealtext.wordlists.update(wordlist)
+            sorted(wordlist.iteritems(),key=lambda asd:asd[0])
 
             #提取特征词
             featword=legalfiles.processtext.featureword.extract_feature_words(content,flag)
