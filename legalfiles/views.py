@@ -12,16 +12,6 @@ from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
 #可以调用业务层，可以调用工具方法
 
 
-# def index(request):
-#     wordlists, featWords = legalfiles.processtext.batchdealtext.processFile()
-#
-#     txts = Txt.objects.all()
-#
-#     return render(request, 'legalfiles/index.html', {
-#         'wordlists': wordlists,
-#         'featWords': featWords,
-#         'txts': txts
-#     })
 
 class IndexView(ListView):
     model = Txt
