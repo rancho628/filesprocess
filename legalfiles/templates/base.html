@@ -103,7 +103,7 @@
                                             {{key}}:
                                             {% for t in tags %}
                                             <li>
-                                                <a href="">{{t}}</a>
+                                                <a href="{% url 'legalfiles:tag' t %}">{{t}}</a>
                                             </li>
                                             {% endfor %}
                                             <br>
