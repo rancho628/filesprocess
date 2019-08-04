@@ -6,7 +6,7 @@ import os
 import legalfiles.processtext.batchdealtext
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView
-from legalfiles.saveobject import savetxt,savetag
+from legalfiles.saveobject import savetxt,savetag,savetxttags
 from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
 #表现层不是一个个的功能，只是中间人
 #可以调用业务层，可以调用工具方法
@@ -181,6 +181,8 @@ def process_file(request):
     legalfiles.saveobject.savetxt.save_txt()
     # 保存标签到数据库
     legalfiles.saveobject.savetag.save_tag()
+    #
+    legalfiles.saveobject.savetxttags.save_txttags()
     # 删除上传上来的文件和我们生成的txt文件
     deletefiles()
     deletefiles2txt()

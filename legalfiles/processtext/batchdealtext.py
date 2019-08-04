@@ -11,8 +11,8 @@ from config2 import data_file_path
 from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
 
 class Batchdealtext():
-    featwords = {}
-    wordlists = {}
+    featwords =[]
+    frewords=[]
     files = None
 
     def processfile(self):
@@ -23,8 +23,7 @@ class Batchdealtext():
         tra.ReadyTraversal()  # 遍历文件并进行相关操作
 
         #读取txt
-        filepath = os.path.abspath(data_txtfile_path)
-        Batchdealtext.files = legalfiles.extracttext.batchreadfiles.loadFiles(filepath)
+        Batchdealtext.files = legalfiles.extracttext.batchreadfiles.loadFiles(os.path.abspath(data_txtfile_path))
 
 
         #对txt遍历分词
@@ -58,14 +57,16 @@ class Batchdealtext():
             wordlist = legalfiles.processtext.freqword.freqword(fdist)
             # print('=' * 3, '打印词频在2~15的词', '=' * 3)
             # print(wordlist)
-            Batchdealtext.wordlists.update(wordlist)
-            sorted(wordlist.iteritems(),key=lambda asd:asd[0])
+            Batchdealtext.frewords.append(wordlist)
+
 
             #提取特征词
             featword=legalfiles.processtext.featureword.extract_feature_words(content,flag)
             # print('=' * 3, '提取人名地方名等', '=' * 3)
             # print(featWord)
-            Batchdealtext.featwords.update(featword)
+            Batchdealtext.featwords.append(featword)
+
+
 
 
 
@@ -74,15 +75,7 @@ class Batchdealtext():
 
 
 if __name__=='__main__':
-    a = None
-    if a:
-        print(1)
-
-    b = ''
-    if b:
-        print(1)
-
-    print('打印出来了')
+    pass
 
 
 
