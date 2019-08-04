@@ -7,11 +7,12 @@ from config2 import data_file_path
 
 
 def save_txt():
+    #获得内容
     files=bat=legalfiles.processtext.batchdealtext.Batchdealtext.files
     #文章标题和内容放进数据库
-    for p,f in zip(os.listdir(data_file_path),files):
-        Txt.objects.get_or_create(title=p)
-        Txt.objects.update_or_create(title=p, defaults={"content":f})
+    for title,content in zip(os.listdir(data_file_path),files):
+        Txt.objects.get_or_create(title=title)
+        Txt.objects.update_or_create(title=title, defaults={"content":content})
 
 
 
