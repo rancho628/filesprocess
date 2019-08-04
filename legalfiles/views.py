@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from legalfiles.models import Txt
+from legalfiles.models import Txt,Tag
 # Create your views here.
 from django.http import HttpResponse
 import os
@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView
 from legalfiles.saveobject import savetxt,savetag,savetxttags
 from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
+from django.shortcuts import render, get_object_or_404
 #表现层不是一个个的功能，只是中间人
 #可以调用业务层，可以调用工具方法
 
@@ -223,3 +224,12 @@ def get_detail_page(request, txt_id):
                       'next_txt': next_txt
                   }
                   )
+
+class TagView(ListView):
+    model = Txt
+    template_name = 'legalfiles/index.html'
+    context_object_name = 'txts'
+
+    def get_queryset(self):
+        tag = get_object_or_404(Tag, name=self.kwargs.get('pk'))
+        return super(TagView, self).get_queryset().filter(tags=tag)

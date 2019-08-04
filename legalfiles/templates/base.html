@@ -97,12 +97,16 @@
                         <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
                             <div class="sidebar">
                                 <h3 class="widget-title">标签</h3>
-                                {% get_tags as tags %}
+                                {% get_tags as tags_dic %}
                                 <ul>
-                                    {% for t in tags %}
-                                    <li>
-                                        <a href="">{{t}}</a>
-                                    </li>
+                                    {% for key,tags in tags_dic.items %}
+                                            {{key}}:
+                                            {% for t in tags %}
+                                            <li>
+                                                <a href="{% url 'legalfiles:tag' t %}">{{t}}</a>
+                                            </li>
+                                            {% endfor %}
+                                            <br>
                                     {% endfor %}
                                 </ul>
                             </div>
