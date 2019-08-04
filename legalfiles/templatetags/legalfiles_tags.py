@@ -2,9 +2,7 @@ from django import template
 from django.db.models.aggregates import Count
 from legalfiles.models import Tag
 from ..models import Txt
-from __future__ import unicode_literals
-
-from pypinyin import lazy_pinyin
+#
 
 register = template.Library()
 
