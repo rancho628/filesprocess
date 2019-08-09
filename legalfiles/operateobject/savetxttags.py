@@ -13,7 +13,7 @@ def save_txttags():
     titles=os.listdir(data_file_path)
 
     for title, tag in zip(titles, tags):
-        #拿到txt对象
+       #拿到txt对象
        obj_txt = Txt.objects.filter(title=title).first()
        #每个txt有自己的标签字典，tag是一个字典
        for t in tag:

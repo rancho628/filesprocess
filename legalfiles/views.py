@@ -6,7 +6,7 @@ import os
 import legalfiles.processtext.batchdealtext
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView, DetailView
-from legalfiles.saveobject import savetxt,savetag,savetxttags
+from legalfiles.operateobject import savetxt,savetag,savetxttags
 from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
 from django.shortcuts import render, get_object_or_404
 #表现层不是一个个的功能，只是中间人
@@ -179,11 +179,11 @@ def process_file(request):
     bat=legalfiles.processtext.batchdealtext.Batchdealtext()
     bat.processfile()
     #保存文件到数据库
-    legalfiles.saveobject.savetxt.save_txt()
+    legalfiles.operateobject.savetxt.save_txt()
     # 保存标签到数据库
-    legalfiles.saveobject.savetag.save_tag()
+    legalfiles.operateobject.savetag.save_tag()
     #
-    legalfiles.saveobject.savetxttags.save_txttags()
+    legalfiles.operateobject.savetxttags.save_txttags()
     # 删除上传上来的文件和我们生成的txt文件
     deletefiles()
     deletefiles2txt()
@@ -191,14 +191,16 @@ def process_file(request):
 
     return HttpResponse("处理文件成功! 请关闭窗口")
 
-
-def get_detail_page(request, txt_id):
+def detail(request, txt_id):
     all_txt = Txt.objects.all()
+
     curr_txt = None
-    previous_index = 0
-    next_index = 0
     previous_txt = None
     next_txt = None
+
+    previous_index = 0
+    next_index = 0
+
     for index, txt in enumerate(all_txt):
         if index == 0:
             previous_index = 0
@@ -209,13 +211,17 @@ def get_detail_page(request, txt_id):
         else:
             previous_index = index - 1
             next_index = index + 1
+        #弄完上面的下表，就检查循环到这篇文章没
         if txt.txt_id == txt_id:
             curr_txt = txt
+            #用enumerate的好处就在这里了，给all_txt的每一个对象弄一个顺序下标，而不用管pk
             previous_txt = all_txt[previous_index]
             next_txt = all_txt[next_index]
             break
 
+
     section_list = curr_txt.content.split('\n')
+
     return render(request, 'legalfiles/detail.html',
                   {
                       'curr_txt': curr_txt,
@@ -229,7 +235,10 @@ class TagView(ListView):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
-
+    #有时候真的乱，这个查询对应标签的文本的功能不是应该写在业务层吗，但是教程就写在这里
+    #重写了父类德方法
     def get_queryset(self):
-        tag = get_object_or_404(Tag, name=self.kwargs.get('pk'))
+        #根据页面传递来的name查询到tag
+        tag = get_object_or_404(Tag, name=self.kwargs.get('name'))
+        #把有这个tag的文本返回
         return super(TagView, self).get_queryset().filter(tags=tag)
