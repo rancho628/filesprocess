@@ -15,8 +15,8 @@
 <div>
     <nav aria-label="...">
         <ul class="pager">
-            <li><a href="/legalfiles/detail/{{ previous_txt.txt_id }}">上一篇：{{ previous_txt.title }}</a></li>
-            <li><a href="/legalfiles/detail/{{ next_txt.txt_id }}">下一篇：{{ next_txt.title }}</a></li>
+            <li><a href="{{ previous_txt.get_absolute_url }}">上一篇：{{ previous_txt.title }}</a></li>
+            <li><a href="{{ next_txt.get_absolute_url }}">下一篇：{{ next_txt.title }}</a></li>
         </ul>
     </nav>
 </div>
@@ -35,8 +35,8 @@
 <div>
     <nav aria-label="...">
         <ul class="pager">
-            <li><a href="/legalfiles/detail/{{ previous_txt.txt_id }}">上一篇：{{ previous_txt.title }}</a></li>
-            <li><a href="/legalfiles/detail/{{ next_txt.txt_id }}">下一篇：{{ next_txt.title }}</a></li>
+            <li><a href="{{ previous_txt.get_absolute_url }}">上一篇：{{ previous_txt.title }}</a></li>
+            <li><a href="{{ next_txt.get_absolute_url }}">下一篇：{{ next_txt.title }}</a></li>
         </ul>
     </nav>
 </div>

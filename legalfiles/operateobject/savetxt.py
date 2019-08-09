@@ -2,10 +2,10 @@ from legalfiles.models import Txt
 import os
 import legalfiles.processtext.batchdealtext
 from config2 import data_file_path
-#这个就是业务层，一个个的功能，供表现层调用
+#这个就是业务层，一个个的功能，供表现层调用,持久层不用你写
 
 
-
+#保存文本功能，文本从工具函数来，不是前端来
 def save_txt():
     #获得内容
     files=bat=legalfiles.processtext.batchdealtext.Batchdealtext.files

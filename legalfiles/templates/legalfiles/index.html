@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block main %}
-{% for t in txts %}
+
+{% for txt in txts %}
 <article class="">
     <header class="entry-header">
         <h6 class="entry-title">
-            <a href="/legalfiles/detail/{{t.txt_id}}" target="_blank">{{ t.title }}</a>
+<!--            <a href="/legalfiles/detail/{{t.txt_id}}" target="_blank">{{ t.title }}</a>-->
+            <a href="{{ txt.get_absolute_url }}" target="_blank">{{ txt.title }}</a>
         </h6>
-
     </header>
     <div class="entry-content clearfix">
-        <p>{{ t.content|truncatechars:154 }}</p>
+        <p>{{ txt.content|truncatechars:154 }}</p>
         <div class="read-more cl-effect-14">
 
         </div>
