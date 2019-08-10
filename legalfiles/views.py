@@ -18,7 +18,7 @@ class IndexView(ListView):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
-    paginate_by = 4
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
         """
@@ -187,6 +187,8 @@ def process_file(request):
     # 删除上传上来的文件和我们生成的txt文件
     deletefiles()
     deletefiles2txt()
+
+    bat.clear()
 
 
     return HttpResponse("处理文件成功! 请关闭窗口")

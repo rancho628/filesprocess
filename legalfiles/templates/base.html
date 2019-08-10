@@ -30,10 +30,10 @@
     <script src="{% static 'legalfiles/js/modernizr.custom.js' %}"></script>
     <script>
     function toupload(){
-        window.open ("../to_upload", "上传文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        window.open ("{% url 'legalfiles:to_upload' %}", "上传文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
     function toprocess(){
-        window.open ("../to_process", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        window.open ("{% url 'legalfiles:to_process' %}", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
     </script>
 </head>

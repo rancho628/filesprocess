@@ -12,7 +12,7 @@ import jieba
 def extract_feature_words(content,flag):
     featWord ={}
     #stwlist = get_stop_words()
-    user_pos_list = [ 'nr']#, 'ns','nt','nz']  # 用户自定义特征词性列表
+    user_pos_list = [ 'ns']#, 'nr','nt','nz']  # 用户自定义特征词性列表
     for i in range(content.__len__())[:]:
         # 过滤掉停用词
         #if word not in stwlist and pos in user_pos_list:
