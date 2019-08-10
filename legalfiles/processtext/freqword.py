@@ -5,7 +5,7 @@ DESC:NLTK词频统计
 """
 
 from nltk import *
-from legalfiles.processtext.cutandremove import readFile,seg_doc
+from legalfiles.processtext.cutandremove import seg_doc
 from collections import Counter
 
 #解决中文显示
@@ -61,12 +61,5 @@ def freqword(fdist):
 
 
 if __name__=='__main__':
-    # 1 读取文本
-    path= r'../'
-    str_doc = readFile(path)
-    # print(str_doc)
 
-    # 2 词频特征统计
-    word_list =seg_doc(str_doc)
-
-    fdist = nltk_wf_feature(word_list)
+    pass
