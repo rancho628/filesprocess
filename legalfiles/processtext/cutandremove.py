@@ -1,8 +1,7 @@
 # coding:utf8
 
 """
-DESC:自定义去停用词
-Prompt: code in Python3 env
+DESC:
 """
 import os
 import re,jieba,sys
@@ -26,12 +25,12 @@ def seg_doc(sent_list):
     # 2 获取停用词
     stwlist = get_stop_words()
 
-    # 3 一段一段地，分词+去除停用词 jieba.cut(part, cut_all=False)
+    # 3 一段一段地，分词+去除停用词
     #word_2dlist = [rm_tokens(ps.cut(part),stwlist) for part in sent_list]
     word_2dlist=[]
     flag_2dlist=[]
     for part in sent_list:
-        word_1dlist,flag_1dlist=rm_tokens(ps.cut(part),stwlist)
+        word_1dlist,flag_1dlist=rm_tokens(ps.cut(part),stwlist)#jieba.cut(part, cut_all=False)
         word_2dlist.append(word_1dlist)
         flag_2dlist.append(flag_1dlist)
 
@@ -94,24 +93,9 @@ def rm_tokens(mywords,stwlist):
     return words,flags
 
 
-# 读取文本信息
-def readFile(path):
-    str_doc = ""
-    with open(path,'r') as f:
-        str_doc = f.read()
-    return str_doc
-
 
 
 if __name__=='__main__':
-    # 1 读取文本
-    # path= r'../files2txt/grape2.txt'
-    # str_doc = readFile(path)
-    # # print(str_doc)
-    #
-    # # 2 分词去停用词
-    # word_list = seg_doc(str_doc)
-    # print(word_list)
 
     print(range(10)[::-1])
 

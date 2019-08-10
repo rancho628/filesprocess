@@ -11,7 +11,9 @@ def save_txt():
     files=bat=legalfiles.processtext.batchdealtext.Batchdealtext.files
     #文章标题和内容放进数据库
     for title,content in zip(os.listdir(data_file_path),files):
+        #没有该文章标题则创建文章对象，有就不创建了
         Txt.objects.get_or_create(title=title)
+        #有该文章标题则更新里面的内容
         Txt.objects.update_or_create(title=title, defaults={"content":content})
 
 

@@ -9,8 +9,8 @@ import shutil
 import threading
 import warnings
 
-#from jieba.analyse import ChineseAnalyzer
-from legalfiles.ChineseAnalyzer import ChineseAnalyzer
+from jieba.analyse import ChineseAnalyzer
+#from legalfiles.ChineseAnalyzer import ChineseAnalyzer
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured

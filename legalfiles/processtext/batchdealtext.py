@@ -66,6 +66,11 @@ class Batchdealtext():
             # print(featWord)
             Batchdealtext.featwords.append(featword)
 
+    def clear(self):
+        Batchdealtext.featwords=[]
+        Batchdealtext.frewords=[]
+        files = None
+
 
 
 
