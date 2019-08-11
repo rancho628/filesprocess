@@ -8,9 +8,9 @@ import re
 import shutil
 import threading
 import warnings
-
-#from jieba.analyse import ChineseAnalyzer
-from legalfiles.ChineseAnalyzer import ChineseAnalyzer
+#总感觉这两个分词都有点问题，老是需要rebuil——index（跟数据库数据无关）
+from jieba.analyse import ChineseAnalyzer
+#from legalfiles.ChineseAnalyzer import ChineseAnalyzer
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured

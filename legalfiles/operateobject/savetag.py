@@ -9,5 +9,5 @@ def save_tag():
     for tag in tags:
         #tag是一个字典
         for t in tag:
-          #这个函数已经有自动去重复功能
+          #这个函数已经有自动去重复功能,如果已经有了就不创建了
           Tag.objects.get_or_create(name=t)

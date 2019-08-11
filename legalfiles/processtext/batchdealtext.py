@@ -11,6 +11,7 @@ from config2 import data_file_path
 from legalfiles.processtext.deletefiles import deletefiles,deletefiles2txt
 
 class Batchdealtext():
+    #类变量，可供外部直接调用
     featwords =[]
     frewords=[]
     files = None
@@ -18,7 +19,6 @@ class Batchdealtext():
     def processfile(self):
         # 转换文件为txt
         rootDir = data_file_path
-        #print(rootDir)
         tra = legalfiles.extracttext.batchconv.TraversalFun(rootDir, ET.Files2Txt)  # 默认方法参数打印所有文件路径
         tra.ReadyTraversal()  # 遍历文件并进行相关操作
 
@@ -28,12 +28,12 @@ class Batchdealtext():
 
         #对txt遍历分词
         for cont in self.files:
-            #按段切原文本
+            #按段切原文本，切完是个列表
             sent_list = cont.split('\n')
             # print('=' * 3, '原文本按段切割后', '=' * 3)
             # print(sent_list)
 
-            #分词，content是分词完毕的结果
+            #分词，content是分词完毕的结果，是个列表
             content,flag = legalfiles.processtext.cutandremove.seg_doc(sent_list)
             # print('=' * 3, '分词完毕文本', '=' * 3)
             # print(content)
@@ -62,11 +62,13 @@ class Batchdealtext():
 
             #提取特征词
             featword=legalfiles.processtext.featureword.extract_feature_words(content,flag)
-            # print('=' * 3, '提取人名地方名等', '=' * 3)
-            # print(featWord)
+            print('=' * 3, '提取人名地方名等', '=' * 3)
+            print(featword)
             Batchdealtext.featwords.append(featword)
 
+
     def clear(self):
+        #清空类变量
         Batchdealtext.featwords=[]
         Batchdealtext.frewords=[]
         files = None
