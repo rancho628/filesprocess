@@ -36,6 +36,90 @@
         window.open ("{% url 'legalfiles:to_process' %}", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
     </script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/layui.css' %}">
+    <style type="text/css">
+		body{
+			padding:0;
+			margin:0;
+			color:#444;
+			background:#f2f2f2;
+		}
+		*{
+			padding:0;
+			margin:0;
+			border:0;
+			list-style: none;
+			text-decoration: none;
+		}
+		.wrap{
+			width:100%;
+			max-width: 1200px;
+			margin:0 auto;
+		}
+		.label-selected{
+			width: 100%;
+			min-height:36px;
+			margin:10px 0;
+			border:1px solid #ccc;
+			background-color: #fff;
+			position: relative;
+		}
+		.cell{
+			display: block;
+			width:90px;
+			height:28px;
+			line-height: 28px;
+			border:3px;
+			background:#009688;
+			color:#fff;
+			text-align: center;
+		}
+		.layui-btn{
+		    height: 34px;
+		}
+		.label-selected li {
+		    display: inline-block;
+		    height: 25px;
+		    line-height: 27px;
+		    font-size: 1.2rem;
+		    padding: 0 1rem;
+		    border: 1px solid #e6e6e6;
+		    border-radius: 2px;
+		    cursor: pointer;
+		    margin: 4px 2px;
+		    color: #666;
+		}
+		#labelItem{
+			margin-bottom: 10px;
+			/*display: none;*/
+		}
+		.label-item {
+		    border: 0.5px solid #e6e6e6;
+		    padding: 7px;
+		    border-radius: 0 1px 1px 0;
+		    position: relative;
+		    overflow: hidden;
+		    background: #fff;
+		}
+		.label-item li {
+		    display: inline-block;
+		    height: 20px;
+		    line-height: 20px;
+		    font-size: 1.2rem;
+		    padding: 0 1.1rem;
+		    border: 1.2px solid #e6e6e6;
+		    border-radius: 0.5px;
+		    cursor: pointer;
+		    margin-bottom: 2px;
+		    margin-left: 2px;
+		    color: #666;
+		}
+		.label-item .selected{
+			color:#ccc;
+		}
+    </style>
+
 </head>
 <body>
 <div class="container">
@@ -43,7 +127,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <h1><a href=""><b>文本</b>处理</a></h1>
+                    <h1><a href="">文本处理</a></h1>
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -59,17 +143,10 @@
                             <li class="cl-effect-11"><a href="{% url 'legalfiles:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toupload()" data-hover="上传">上传</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toprocess()" data-hover="处理">处理</a></li>
+                            <li class="cl-effect-11"><a href="" onclick="" data-hover="标签管理">标签管理</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
-<!--                <div>-->
-<!--                    <div >-->
-<!--                        <form role="search" method="get" action="/search/">-->
-<!--                            <input type="search" name="q" placeholder="搜索" required>-->
-<!--                            <button type="submit">查询</button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
                 <div id="header-search-box">
                     <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
                     <div id="search-form" class="search-form">
@@ -88,32 +165,55 @@
     <div class="container">
         <div class="row">
             <aside class="col-md-3">
-                {% block toc %}
-                {% endblock toc %}
+<!--                {% block toc %}-->
+<!--                {% endblock toc %}-->
                 <div class="widget widget-tag-cloud">
                     <div class="panel-body" style="height: 700px; overflow-y:scroll">
                         <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
-                            <div class="sidebar">
-                                <h3 class="widget-title">标签</h3>
-                                {% get_tags as tags_dic %}
-                                <ul>
+<!--                            <div class="sidebar">-->
+<!--                                <h3 class="widget-title">标签</h3>-->
+<!--                                {% get_tags as tags_dic %}-->
+<!--                                <ul>-->
+<!--                                    {% for key,tags in tags_dic.items %}-->
+<!--                                    {{key}}:-->
+<!--                                    {% for t in tags %}-->
+<!--                                    <li>-->
+<!--                                        <a href="{% url 'legalfiles:tag' t t %}">{{t}}</a>-->
+<!--                                    </li>-->
+<!--                                    {% endfor %}-->
+<!--                                    <br>-->
+<!--                                    {% endfor %}-->
+<!--                                </ul>-->
+<!--                            </div>-->
+                            <div class="layui-col-md12" id="labelItem">
+                                <!--标签库-->
+                                <div class="label-item">
+                                    {% get_tags as tags_dic %}
                                     {% for key,tags in tags_dic.items %}
-                                            {{key}}:
-                                            {% for t in tags %}
-                                            <li>
-                                                <a href="{% url 'legalfiles:tag' t %}">{{t}}</a>
-                                            </li>
-                                            {% endfor %}
-                                            <br>
+                                    {{key}}:
+                                    {% for t in tags %}
+                                    <li data="{{t}}">
+<!--                                        <a href="{% url 'legalfiles:tag' t t %}">{{t}}</a>-->
+                                        <span>{{t}}</span>
+                                    </li>
                                     {% endfor %}
-                                </ul>
+                                    <br>
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                </div>
             </aside>
 
             <main class="col-md-9">
+                <div class="wrap">
+                    <div class="label-selected">
+                        <a href="javascript:;" class="layui-btn" id="cell" style="float: right">标签查询</a>
+                        <input type="hidden" name="label">
+                    </div>
+
+                </div>
                 {% block main %}
                 {% endblock main %}
             </main>
@@ -139,5 +239,86 @@
 <!--</div>-->
 <script src="{% static 'legalfiles/js/script.js' %}"></script>
 
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="{% static 'legalfiles/js/layer.js' %}"></script>
+<script type="text/javascript">
+$(function(){
+  $(".show-labelitem").on("click",function(){
+    $(this).hide();
+    $(".hide-labelitem").show();
+    $("#labelItem").show();
+  });
+  $(".hide-labelitem").on("click",function(){
+    $(this).hide();
+    $(".show-labelitem").show();
+    $("#labelItem").hide();
+  });
+  $(".label-item").on("click","li",function(){
+    var id = $(this).attr("data");
+    var text = $(this).children("span").html();
+    var labelHTML = "<li data="+id+">x "+text+"</li>";
+    if($(this).hasClass("selected")){
+      return false;
+    }else if($(".label-selected").children("li").length >= 8){
+      layer.msg("最多可以选择8个哦");
+      return false;
+    }
+    //加一个li标签
+    $(".label-selected").append(labelHTML);
+    val = '';
+    //先更新一下这个字符串
+    var length=$(".label-selected").children("li").length;
+    for(var i = 0; i < length ; i++){
+    	if (i!=length-1){
+            val += $(".label-selected").children("li").eq(i).attr("data")+'/';
+        }
+        else{
+            val += $(".label-selected").children("li").eq(i).attr("data")+'/';
+        }
+    }
+    for(var i=0; i< 8-length;i++){
+    	val += ' /';
+    }
+    //把这个字符串放进去它的value里面（上面没有显式写出来的，默认为“”）
+    $("input[name='label']").val(val);
+    $(this).addClass("selected");
+  });
+
+  var val = "";
+  $(".label-selected").on("click","li",function(){
+    var id = $(this).attr("data");
+    val = '';
+    //去掉这个li
+    $(this).remove();
+    //更新一下这个字符串
+    var length=$(".label-selected").children("li").length;
+    for(var i = 0; i < length ; i++){
+    	if (i!=length-1){
+            val += $(".label-selected").children("li").eq(i).attr("data")+'/';
+        }
+        else{
+            val += $(".label-selected").children("li").eq(i).attr("data")+'/';
+        }
+    }
+    for(var i=0; i< 8-length;i++){
+    	val += ' /';
+    }
+    $("input[name='label']").val(val);
+    $(".label-item").find("li[data='"+id+"']").removeClass("selected");
+  });
+  //获取标签
+  $("#cell").on("click",function(){
+  	if($("input[name='label']").val() == ""){
+  		return false;
+  	}else{
+<!--		layer.msg("标签内容为:"+$("input[name='label']").val());-->
+
+        window.location.href="/legalfiles/tag/"+$("input[name='label']").val();
+  	}
+  })
+})
+
+
+</script>
 </body>
 </html>

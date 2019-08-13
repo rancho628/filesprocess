@@ -49,16 +49,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/legalfiles/static/legalfiles/js" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles\js" />
+      <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles\css" />
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles" />
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\static\legalfiles\js" />
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\static\legalfiles\css" />
-      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\static\legalfiles" />
-      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\search" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\legalfiles" />

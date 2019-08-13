@@ -38,32 +38,32 @@ class Batchdealtext():
             # print('=' * 3, '分词完毕文本', '=' * 3)
             # print(content)
 
-            # 词频统计,word是一个counter,我主要是获取他对应词语的频率，fdist是给下面用的
-            words,fdist = legalfiles.processtext.freqword.nltk_wf_feature(content)
-            #获取所有的不重复的词
-            content_nocov = list(set(content))
-            word_fre={}
-            for cv in content_nocov:
-                word_fre[cv]=words[cv]
-            #按照词频降序排序
-            sorted_word_fre=sorted(word_fre.items(),key=itemgetter(1),reverse=True)
-            # print('=' * 3, '统计词频', '=' * 3)
-            # print(sorted_word_fre)
-            #切出10个最高频率词
-            # print('=' * 3, '10个最高频率词', '=' * 3)
-            # print(sorted_word_fre[0:10])
-
-            #打印指定词频范围的词
-            wordlist = legalfiles.processtext.freqword.freqword(fdist)
-            # print('=' * 3, '打印词频在2~15的词', '=' * 3)
-            # print(wordlist)
-            Batchdealtext.frewords.append(wordlist)
+            # # 词频统计,word是一个counter,我主要是获取他对应词语的频率，fdist是给下面用的
+            # words,fdist = legalfiles.processtext.freqword.nltk_wf_feature(content)
+            # #获取所有的不重复的词（去重复）
+            # content_nocov = list(set(content))
+            # word_fre={}
+            # for cv in content_nocov:
+            #     word_fre[cv]=words[cv]
+            # #按照词频降序排序
+            # sorted_word_fre=sorted(word_fre.items(),key=itemgetter(1),reverse=True)
+            # # print('=' * 3, '统计词频', '=' * 3)
+            # # print(sorted_word_fre)
+            # #切出10个最高频率词
+            # # print('=' * 3, '10个最高频率词', '=' * 3)
+            # # print(sorted_word_fre[0:10])
+            #
+            # #打印指定词频范围的词
+            # wordlist = legalfiles.processtext.freqword.freqword(fdist)
+            # # print('=' * 3, '打印词频在2~15的词', '=' * 3)
+            # # print(wordlist)
+            # Batchdealtext.frewords.append(wordlist)
 
 
             #提取特征词
             featword=legalfiles.processtext.featureword.extract_feature_words(content,flag)
-            print('=' * 3, '提取人名地方名等', '=' * 3)
-            print(featword)
+            # print('=' * 3, '提取人名地方名等', '=' * 3)
+            # print(featword)
             Batchdealtext.featwords.append(featword)
 
 
