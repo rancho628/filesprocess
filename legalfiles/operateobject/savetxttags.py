@@ -4,8 +4,6 @@ import legalfiles.processtext.batchdealtext
 from config2 import data_file_path
 #这个就是业务层，一个个的功能，供表现层调用
 
-
-
 def save_txttags():
     #tags是一个字典列表(字典是列表的元素)
     tags= legalfiles.processtext.batchdealtext.Batchdealtext.featwords

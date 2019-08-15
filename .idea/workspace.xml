@@ -32,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -53,16 +53,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles\css" />
+      <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\templates\legalfiles" />
+      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\legalfiles" />
+      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\filesprocess" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles\js" />
+      <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles" />
       <recent name="C:\Users\q\PycharmProjects\filesprocess\legalfiles\static\legalfiles\css" />
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles" />
       <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\static\legalfiles\js" />
-      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\static\legalfiles\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\legalfiles" />
-      <recent name="C:\Users\rancho\PycharmProjects\filesprocess\legalfiles\templates\filesprocess" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,13 +79,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.batchdealtext">
+  <component name="RunManager" selected="Python.deletetag">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="filesprocess" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\q\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="batchdealtext" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="filesprocess" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTING_MODULE" value="filesprocess.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/processtext" />
@@ -100,19 +124,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="deletefiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="filesprocess" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTING_MODULE" value="filesprocess.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/extracttext" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/processtext" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/extracttext/dd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/processtext/deletefiles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,19 +146,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="deletefiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="deletetag" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="filesprocess" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTING_MODULE" value="filesprocess.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/processtext" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/operateobject" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/processtext/deletefiles.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/operateobject/deletetag.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="deletetxttags" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="filesprocess" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTING_MODULE" value="filesprocess.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/operateobject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/operateobject/deletetxttags.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,34 +211,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="savetxt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="filesprocess" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/legalfiles/saveobject" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/legalfiles/saveobject/savetxt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.batchdealtext" />
+      <item itemvalue="Python.deletefiles" />
+      <item itemvalue="Python.deletetxttags" />
+      <item itemvalue="Python.ff" />
+      <item itemvalue="Python.deletetag" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.deletetag" />
+        <item itemvalue="Python.deletetxttags" />
         <item itemvalue="Python.batchdealtext" />
         <item itemvalue="Python.deletefiles" />
         <item itemvalue="Python.ff" />
-        <item itemvalue="Python.dd" />
-        <item itemvalue="Python.savetxt" />
       </list>
     </recent_temporary>
   </component>

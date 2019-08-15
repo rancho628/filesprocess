@@ -35,6 +35,7 @@
     function toprocess(){
         window.open ("{% url 'legalfiles:to_process' %}", "处理文件", "height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
+
     </script>
 
     <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/layui.css' %}">
@@ -143,7 +144,7 @@
                             <li class="cl-effect-11"><a href="{% url 'legalfiles:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toupload()" data-hover="上传">上传</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toprocess()" data-hover="处理">处理</a></li>
-                            <li class="cl-effect-11"><a href="" onclick="" data-hover="标签管理">标签管理</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'legalfiles:tag_admin' ' ' %}"  data-hover="标签管理">标签管理</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -248,15 +249,19 @@ $(function(){
     $(".hide-labelitem").show();
     $("#labelItem").show();
   });
+
   $(".hide-labelitem").on("click",function(){
     $(this).hide();
     $(".show-labelitem").show();
     $("#labelItem").hide();
   });
+
+  //侧边标签点击
   $(".label-item").on("click","li",function(){
     var id = $(this).attr("data");
     var text = $(this).children("span").html();
     var labelHTML = "<li data="+id+">x "+text+"</li>";
+    //已经有了
     if($(this).hasClass("selected")){
       return false;
     }else if($(".label-selected").children("li").length >= 8){
@@ -281,9 +286,11 @@ $(function(){
     }
     //把这个字符串放进去它的value里面（上面没有显式写出来的，默认为“”）
     $("input[name='label']").val(val);
+    //标记一下已经放过了
     $(this).addClass("selected");
   });
 
+  //点解右边顶部的
   var val = "";
   $(".label-selected").on("click","li",function(){
     var id = $(this).attr("data");
@@ -304,8 +311,10 @@ $(function(){
     	val += ' /';
     }
     $("input[name='label']").val(val);
+    //移除一下标记
     $(".label-item").find("li[data='"+id+"']").removeClass("selected");
   });
+
   //获取标签
   $("#cell").on("click",function(){
   	if($("input[name='label']").val() == ""){

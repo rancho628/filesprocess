@@ -1,0 +1,230 @@
+{% load static %}
+{% load legalfiles_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>标签管理</title>
+    <!--    <title>Black &amp; White</title>-->
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'legalfiles/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'legalfiles/css/pace.css' %}">
+    <link rel="stylesheet" href="{% static 'legalfiles/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'legalfiles/css/highlights/github.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/layui.css' %}">
+
+    <style>
+        span.highlighted {
+            color: red;
+        }
+
+
+
+    </style>
+    <style type="text/css">
+		body{
+			padding:0;
+			margin:0;
+			color:#444;
+			background:#f2f2f2;
+		}
+		*{
+			padding:0;
+			margin:0;
+			border:0;
+			list-style: none;
+			text-decoration: none;
+		}
+		.wrap{
+			width:100%;
+			max-width: 1200px;
+			margin:0 auto;
+		}
+		.label-selected{
+			width: 100%;
+			min-height:36px;
+			margin:10px 0;
+			border:1px solid #ccc;
+			background-color: #fff;
+			position: relative;
+		}
+		.cell{
+			display: block;
+			width:90px;
+			height:28px;
+			line-height: 28px;
+			border:3px;
+			background:#009688;
+			color:#fff;
+			text-align: center;
+		}
+		.layui-btn{
+		    height: 34px;
+		}
+		.label-selected li {
+		    display: inline-block;
+		    height: 25px;
+		    line-height: 27px;
+		    font-size: 1.2rem;
+		    padding: 0 1rem;
+		    border: 1px solid #e6e6e6;
+		    border-radius: 2px;
+		    cursor: pointer;
+		    margin: 4px 2px;
+		    color: #666;
+		}
+		#labelItem{
+			margin-bottom: 10px;
+			/*display: none;*/
+		}
+		.label-item {
+		    border: 0.5px solid #e6e6e6;
+		    padding: 7px;
+		    border-radius: 0 1px 1px 0;
+		    position: relative;
+		    overflow: hidden;
+		    background: #fff;
+		}
+		.label-item li {
+		    display: inline-block;
+		    height: 20px;
+		    line-height: 20px;
+		    font-size: 1.2rem;
+		    padding: 0 1.1rem;
+		    border: 1.2px solid #e6e6e6;
+		    border-radius: 0.5px;
+		    cursor: pointer;
+		    margin-bottom: 2px;
+		    margin-left: 2px;
+		    color: #666;
+		}
+		.label-item .selected{
+			color:#ccc;
+		}
+
+
+
+
+    </style>
+
+    <!-- js -->
+    <script src="{% static 'legalfiles/js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'legalfiles/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'legalfiles/js/pace.min.js' %}"></script>
+    <script src="{% static 'legalfiles/js/modernizr.custom.js' %}"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="{% static 'legalfiles/js/layer.js' %}"></script>
+
+</head>
+<body>
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="">标签管理</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cl-effect-11"><a href="{% url 'legalfiles:index' %}" data-hover="返回">返回</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="widget widget-tag-cloud">
+                    <div class="panel-body" style="height: 700px; overflow-y:scroll">
+                        <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
+
+                            <div class="layui-col-md12" id="labelItem">
+                                <!--标签库-->
+                                <div class="label-item">
+                                    {% get_tags as tags_dic %}
+                                    {% for key,tags in tags_dic.items %}
+                                    {{key}}:
+                                    {% for t in tags %}
+                                    <li data="{{t}}">
+                                        <!--                                        <a href="{% url 'legalfiles:tag' t t %}">{{t}}</a>-->
+                                        <span>{{t}} x</span>
+                                    </li>
+                                    {% endfor %}
+                                    <br>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-md-9">
+                {% for txt in txts %}
+                <article class="">
+                    <header class="entry-header">
+                        <h6 class="entry-title">
+                            <a href="{{ txt.get_absolute_url }}" target="_blank">{{ txt.title }}</a>
+                        </h6>
+                    </header>
+
+                </article>
+                {% endfor %}
+
+            </main>
+
+        </div>
+    </div>
+</div>
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">&copy 2019
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+
+
+</script>
+<script type="text/javascript">
+$(function(){
+
+
+  //左边点击
+  $(".label-item").on("click","li",function(){
+    var id = $(this).attr("data");
+
+    window.location.href="/legalfiles/tag_admin/"+id;
+
+  });
+
+
+})
+
+</script>
+</body>
+</html>
