@@ -27,7 +27,7 @@ class Batchdealtext():
 
 
         #对txt遍历分词
-        for cont in self.files:
+        for cont in Batchdealtext.files:
             #按段切原文本，切完是个列表
             sent_list = cont.split('\n')
             # print('=' * 3, '原文本按段切割后', '=' * 3)
@@ -71,7 +71,7 @@ class Batchdealtext():
         #清空类变量
         Batchdealtext.featwords=[]
         Batchdealtext.frewords=[]
-        files = None
+        Batchdealtext.files = None
 
 
 
