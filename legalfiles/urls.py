@@ -21,4 +21,5 @@ urlpatterns = [
     path(r'detail/<int:txt_id>', legalfiles.views.detail, name='detail'),
     path(r'test/', legalfiles.views.test, name='test'),
     path(r'tag_admin/<id>', legalfiles.views.TagAdmin.as_view(), name='tag_admin'),
+    path(r'register/', legalfiles.views.register, name='register'),
 ]
