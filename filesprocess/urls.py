@@ -20,11 +20,13 @@ from django.conf.urls import url
 from django.http import HttpResponse
 
 import haystack.urls
-
+app_name = legalfiles
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('legalfiles/', include('legalfiles.urls'),name='legalfiles'),
     url(r'^search/', include('haystack.urls')),
     url(r'^robots\.txt$', lambda r: HttpResponse('User-agent: *\nDisallow: /', content_type='text/plain')),
+    url(r'^legalfiles/', include('django.contrib.auth.urls')),
+    url(r'^$', legalfiles.views.index2, name='index2')
 ]

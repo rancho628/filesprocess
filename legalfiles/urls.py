@@ -3,6 +3,7 @@ from django.urls import path, include
 import legalfiles.views
 
 app_name = 'legalfiles'
+
 urlpatterns = [
     path(r'to_upload/', legalfiles.views.to_upload, name='to_upload'),
     path(r'process_file/', legalfiles.views.process_file, name='process_file'),
@@ -12,4 +13,5 @@ urlpatterns = [
     path(r'index/', legalfiles.views.IndexView.as_view(), name='index'),
     path(r'^tag/(?P<name>[0-9]+)/$', legalfiles.views.TagView.as_view(), name='tag'),
     path(r'^detail/<int:txt_id>', legalfiles.views.detail, name='detail'),
+    path(r'register/', legalfiles.views.register, name='register'),
 ]

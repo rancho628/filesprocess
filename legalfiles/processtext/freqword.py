@@ -5,7 +5,7 @@ DESC:NLTK词频统计
 """
 
 from nltk import *
-from legalfiles.processtext.cutandremove import readFile,seg_doc
+from legalfiles.processtext.cutandremove import seg_doc
 from collections import Counter
 
 #解决中文显示
