@@ -51,6 +51,7 @@ class IndexView(ListView):
 
         # 将更新后的 context 返回，以便 ListView 使用这个字典中的模板变量去渲染模板。
         # 注意此时 context 字典中已有了显示分页导航条所需的数据。
+        #我写：这个就是返回给html的字典
         return context
 
     def pagination_data(self, paginator, page, is_paginated):
@@ -233,14 +234,79 @@ def detail(request, txt_id):
                   }
                   )
 
-class TagView(ListView):
+def test(request):
+    return render(request, 'legalfiles/test.html')
+
+class TagView(ListView  ):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
+
+
+    # def get_context_data(self, **kwargs):
+    #     # 我们需要先继承至父模板的get_context_data方法，否则我们有很多方法将不能使用
+    #     context = super(TagView, self).get_context_data(**kwargs)
+    #     paginator = context.get('paginator')
+
     #有时候真的乱，这个查询对应标签的文本的功能不是应该写在业务层吗，但是教程就写在这里
-    #重写了父类德方法
+    #重写了父类方法
     def get_queryset(self):
-        #根据页面传递来的name查询到tag
-        tag = get_object_or_404(Tag, name=self.kwargs.get('name'))
-        #把有这个tag的文本返回
-        return super(TagView, self).get_queryset().filter(tags=tag)
+        # #根据页面传递来的name查询到tag
+        # tag1 = get_object_or_404(Tag, name=self.kwargs.get('name1'))
+        # tag2 = get_object_or_404(Tag, name=self.kwargs.get('name2'))
+        # print(type(self.kwargs.get('name1')))
+        #
+        # #把有这个tag的文本返回
+        # return super(TagView, self).get_queryset().filter(tags=tag1).filter(tags=tag2)
+
+        ret = super(TagView, self).get_queryset()
+
+        if self.kwargs.get('name1')!=' ':
+          tag1 = get_object_or_404(Tag, name=self.kwargs.get('name1'))
+          ret=ret.filter(tags=tag1)
+        else:
+          pass
+
+        if self.kwargs.get('name2')!=' ':
+          tag2 = get_object_or_404(Tag, name=self.kwargs.get('name2'))
+          ret=ret.filter(tags=tag2)
+        else:
+          pass
+
+        if self.kwargs.get('name3')!=' ':
+          tag3 = get_object_or_404(Tag, name=self.kwargs.get('name3'))
+          ret=ret.filter(tags=tag3)
+        else:
+          pass
+
+        if self.kwargs.get('name4')!=' ':
+          tag4 = get_object_or_404(Tag, name=self.kwargs.get('name4'))
+          ret=ret.filter(tags=tag4)
+        else:
+          pass
+
+        if self.kwargs.get('name5')!=' ':
+          tag5 = get_object_or_404(Tag, name=self.kwargs.get('name5'))
+          ret=ret.filter(tags=tag5)
+        else:
+          pass
+
+        if self.kwargs.get('name6')!=' ':
+          tag6 = get_object_or_404(Tag, name=self.kwargs.get('name6'))
+          ret=ret.filter(tags=tag6)
+        else:
+          pass
+
+        if self.kwargs.get('name7')!=' ':
+          tag7 = get_object_or_404(Tag, name=self.kwargs.get('name7'))
+          ret=ret.filter(tags=tag7)
+        else:
+          pass
+
+        if self.kwargs.get('name8')!=' ':
+          tag8 = get_object_or_404(Tag, name=self.kwargs.get('name8'))
+          ret=ret.filter(tags=tag8)
+        else:
+          pass
+
+        return ret

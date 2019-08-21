@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sTags - Demo</title>
+<link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/jquery.sTags.css' %}">
+<style type="text/css">
+hr{
+	margin: 100px 0 0 0;
+    border: #fb0000 solid;
+    border-width: 1px 0 0 0;
+}
+</style>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+<script src="https://cdn.bootcss.com/highlight.js/9.14.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="{% static 'legalfiles/js/jquery.sTags.js' %}"></script>
+</head>
+<body>
+
+<h1>DEMO INPUT 1 : 基本功能</h1>
+
+<input type="text" id="DemoInput1">
+
+<script type="text/javascript">
+	var TagsData=[]
+	TagsData.push({id:1,name:"PHP",screen:"php"})
+	TagsData.push({id:4,name:"C#",screen:"c"})
+	TagsData.push({id:6,name:"JavaScript",screen:"javascript"})
+	TagsData.push({id:2,name:"HTML5",screen:"html5"})
+	TagsData.push({id:3,name:"Python",screen:"python"})
+	TagsData.push({id:5,name:"数据库",screen:"sjk"})
+	TagsData.push({id:7,name:"梁城",screen:"fwq"})
+
+	$("#DemoInput1").sTags({
+		data:TagsData,
+	})
+</script>
+
+</body>
+</html>
