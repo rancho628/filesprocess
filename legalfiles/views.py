@@ -286,13 +286,16 @@ class TagAdmin(ListView):
         # 首先获得父类生成的传递给模板的字典。
         context = super(TagAdmin, self).get_context_data(**kwargs)
         context['mytags'] = get_tags(get_mytags(self.request))
-        # 父类生成的字典中已有 paginator、page_obj、is_paginated 这三个模板变量，
-        # paginator 是 Paginator 的一个实例，
-        # page_obj 是 Page 的一个实例，
-        # is_paginated 是一个布尔变量，用于指示是否已分页。
-        # 例如如果规定每页 10 个数据，而本身只有 5 个数据，其实就用不着分页，此时 is_paginated=False。
-        # 关于什么是 Paginator，Page 类在 Django Pagination 简单分页：http://zmrenwu.com/post/34/ 中已有详细说明。
-        # 由于 context 是一个字典，所以调用 get 方法从中取出某个键对应的值。
+        # txttags = []
+        # mytxts = Txt.objects.filter(users_id=self.request.user)
+        # for mytxt in mytxts:
+        #     txt_tag = Txt.objects.filter(txt_id=mytxt.txt_id).values_list("tags")
+        #     for tag_id in txt_tag:
+        #         # mytags_id.add(tag_id[0])
+        #         txttags.append(Tag.objects.get(id=tag_id[0]).name)
+        #     txttags.append("#")
+        # context['txttags']=txttags
+
         paginator = context.get('paginator')
         page = context.get('page_obj')
         is_paginated = context.get('is_paginated')
