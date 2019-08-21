@@ -15,7 +15,8 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import render, redirect
 
 from .forms import RegisterForm
-
+from django.http import HttpRequest
+myrequest = HttpRequest()
 
 def register(request):
     # 从 get 或者 post 请求中获取 next 参数值
@@ -53,14 +54,227 @@ def register(request):
 def index2(request):
     return render(request,'index2.html')
 
+def to_upload(request):
+    print(request.session)
+
+    #print(request.COOKIES)
+    return render(request, 'legalfiles/upload.html')
+
+def upload_file(request):
+    deletefiles()
+    deletefiles2txt()
+    # if request.method == "POST":    # 请求方法为POST时，进行处理
+    myFile = request.FILES.getlist("myfile", None)  # 获取上传的文件，如果没有文件，则默认为None
+
+    # if not myFile:
+    #     return HttpResponse("no files for upload!")
+
+    for f in myFile:
+        print(f.name)
+        destination = open('legalfiles/files/' + f.name, 'wb+')  # 打开特定的文件进行二进制的写操作
+        for chunk in f.chunks():
+            destination.write(chunk)
+        destination.close()
+    return HttpResponse("上传成功! 请关闭窗口")
 
 
-class IndexView(ListView):
+def to_process(request):
+    return render(request, 'legalfiles/processfiles.html')
+
+
+def process_file(request):
+
+    # if request.method == "POST":
+    #先处理txt们,分词什么的
+    bat=legalfiles.processtext.batchdealtext.Batchdealtext()
+    bat.processfile()
+    #保存文件到数据库
+    legalfiles.operateobject.savetxt.save_txt(request)
+
+    # 保存标签到数据库
+    legalfiles.operateobject.savetag.save_tag()
+    #
+    legalfiles.operateobject.savetxttags.save_txttags(request)
+    # 删除上传上来的文件和我们生成的txt文件
+    deletefiles()
+    deletefiles2txt()
+    #清空类变量
+    bat.clear()
+
+
+
+
+
+    return HttpResponse("处理文件成功! 请关闭窗口")
+
+def detail(request, txt_id):
+    all_txt = Txt.objects.all()
+
+    curr_txt = None
+    previous_txt = None
+    next_txt = None
+
+    previous_index = 0
+    next_index = 0
+
+    for index, txt in enumerate(all_txt):
+        if index == 0:
+            previous_index = 0
+            next_index = index + 1
+        elif index == len(all_txt) - 1:
+            previous_index = index - 1
+            next_index = index
+        else:
+            previous_index = index - 1
+            next_index = index + 1
+        #弄完上面的下表，就检查循环到这篇文章没
+        if txt.txt_id == txt_id:
+            curr_txt = txt
+            #用enumerate的好处就在这里了，给all_txt的每一个对象弄一个顺序下标，而不用管pk
+            previous_txt = all_txt[previous_index]
+            next_txt = all_txt[next_index]
+            break
+
+
+    section_list = curr_txt.content.split('\n')
+
+    return render(request, 'legalfiles/detail.html',
+                  {
+                      'curr_txt': curr_txt,
+                      'section_list': section_list,
+                      'previous_txt': previous_txt,
+                      'next_txt': next_txt
+                  }
+                  )
+
+def test(request):
+    return render(request, 'legalfiles/test.html')
+
+from xpinyin import Pinyin
+def get_tags(tags):
+    pin = Pinyin()
+    ret={}
+    list=[]
+    for tag in tags:
+        #把一个个标签的拼音和名字组合起来，list是一个元组列表
+        list.append((pin.get_pinyin(tag),tag))
+    #默认按照元组的第一个元素排序
+    list.sort()
+    temp_list = []
+    #排序完的列表的长度
+    length=len(list)
+    #print(length)
+    for i in range(length):
+        if i>0:
+            #如果首字母和前一个相同，加进去temp
+           if list[i][0][0]==list[i-1][0][0]:
+              temp_list.append(list[i][1])
+              # #到了结尾了，别忘了弄进去ret，之前忽略了
+              # if i==length-1:
+              #     ret[list[i][0][0]] = temp_list
+            #发现不相同，就是新的首字母开启，旧字母作为key，temp这个列表作为内容，放进去ret
+           else:
+              #保存旧字母的
+              ret[list[i-1][0][0]]=temp_list
+              #清空
+              temp_list=[]
+              temp_list.append(list[i][1])
+        else:
+            #第一个，那就开辟
+            temp_list.append(list[i][1])
+    if length>0:
+    #返回一个key是首字母，value是列表的字典
+        ret[list[length-1][0][0]] = temp_list
+    return ret
+
+def get_mytags(request):
+    mytags = set()
+    mytxts = Txt.objects.filter(users_id=request.user)
+    for mytxt in mytxts:
+        # print(mytxt.txt_id)
+        # txt's tagsji
+        txt_tag = Txt.objects.filter(txt_id=mytxt.txt_id).values_list("tags")
+        for tag_id in txt_tag:
+            # mytags_id.add(tag_id[0])
+            mytags.add(Tag.objects.get(id=tag_id[0]).name)
+    return mytags
+
+#search in input
+class TagView(ListView):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
-    paginate_by = 5
 
+    #有时候真的乱，这个查询对应标签的文本的功能不是应该写在业务层吗，但是教程就写在这里
+    #重写了父类方法
+    def get_queryset(self):
+        ret = Txt.objects.filter(users_id=self.request.user)
+
+        if self.kwargs.get('name1')!=' ':
+          tag1 = get_object_or_404(Tag, name=self.kwargs.get('name1'))
+          ret=ret.filter(tags=tag1)
+        else:
+          pass
+
+        if self.kwargs.get('name2')!=' ':
+          tag2 = get_object_or_404(Tag, name=self.kwargs.get('name2'))
+          ret=ret.filter(tags=tag2)
+        else:
+          pass
+
+        if self.kwargs.get('name3')!=' ':
+          tag3 = get_object_or_404(Tag, name=self.kwargs.get('name3'))
+          ret=ret.filter(tags=tag3)
+        else:
+          pass
+
+        if self.kwargs.get('name4')!=' ':
+          tag4 = get_object_or_404(Tag, name=self.kwargs.get('name4'))
+          ret=ret.filter(tags=tag4)
+        else:
+          pass
+
+        if self.kwargs.get('name5')!=' ':
+          tag5 = get_object_or_404(Tag, name=self.kwargs.get('name5'))
+          ret=ret.filter(tags=tag5)
+        else:
+          pass
+
+        if self.kwargs.get('name6')!=' ':
+          tag6 = get_object_or_404(Tag, name=self.kwargs.get('name6'))
+          ret=ret.filter(tags=tag6)
+        else:
+          pass
+
+        if self.kwargs.get('name7')!=' ':
+          tag7 = get_object_or_404(Tag, name=self.kwargs.get('name7'))
+          ret=ret.filter(tags=tag7)
+        else:
+          pass
+
+        if self.kwargs.get('name8')!=' ':
+          tag8 = get_object_or_404(Tag, name=self.kwargs.get('name8'))
+          ret=ret.filter(tags=tag8)
+        else:
+          pass
+
+        return ret
+
+
+# def tag_admin(request,id):
+#     #删除这个标签
+#     deletetag.delete_tag(id)
+#     #跳回去标签管理页面
+#     return render(request, 'legalfiles/tag_admin.html')
+
+class TagAdmin(ListView):
+    model = Txt
+    template_name = 'legalfiles/tag_admin.html'
+    context_object_name = 'txts'
+    paginate_by = 5
+    def get_queryset(self):
+
+        return Txt.objects.filter(users_id=self.request.user)
     def get_context_data(self, **kwargs):
         """
         在视图函数中将模板变量传递给模板是通过给 render 函数的 context 参数传递一个字典实现的，
@@ -69,10 +283,9 @@ class IndexView(ListView):
         在类视图中，这个需要传递的模板变量字典是通过 get_context_data 获得的，
         所以我们复写该方法，以便我们能够自己再插入一些我们自定义的模板变量进去。
         """
-
         # 首先获得父类生成的传递给模板的字典。
-        context = super(IndexView, self).get_context_data(**kwargs)
-
+        context = super(TagAdmin, self).get_context_data(**kwargs)
+        context['mytags'] = get_tags(get_mytags(self.request))
         # 父类生成的字典中已有 paginator、page_obj、is_paginated 这三个模板变量，
         # paginator 是 Paginator 的一个实例，
         # page_obj 是 Page 的一个实例，
@@ -193,173 +406,14 @@ class IndexView(ListView):
 
         return data
 
-def to_upload(request):
-    return render(request, 'legalfiles/upload.html')
-
-def upload_file(request):
-    # if request.method == "POST":    # 请求方法为POST时，进行处理
-    myFile = request.FILES.getlist("myfile", None)  # 获取上传的文件，如果没有文件，则默认为None
-
-    # if not myFile:
-    #     return HttpResponse("no files for upload!")
-
-    for f in myFile:
-        destination = open('legalfiles\\files\\' + f.name, 'wb+')  # 打开特定的文件进行二进制的写操作
-        for chunk in f.chunks():
-            destination.write(chunk)
-        destination.close()
-    return HttpResponse("上传成功! 请关闭窗口")
-
-
-def to_process(request):
-    return render(request, 'legalfiles/processfiles.html')
-
-
-def process_file(request):
-    # if request.method == "POST":
-    #先处理txt们,分词什么的
-    bat=legalfiles.processtext.batchdealtext.Batchdealtext()
-    bat.processfile()
-    #保存文件到数据库
-    legalfiles.operateobject.savetxt.save_txt()
-    # 保存标签到数据库
-    legalfiles.operateobject.savetag.save_tag()
-    #
-    legalfiles.operateobject.savetxttags.save_txttags()
-    # 删除上传上来的文件和我们生成的txt文件
-    deletefiles()
-    deletefiles2txt()
-    #清空类变量
-    bat.clear()
-
-
-
-
-
-    return HttpResponse("处理文件成功! 请关闭窗口")
-
-def detail(request, txt_id):
-    all_txt = Txt.objects.all()
-
-    curr_txt = None
-    previous_txt = None
-    next_txt = None
-
-    previous_index = 0
-    next_index = 0
-
-    for index, txt in enumerate(all_txt):
-        if index == 0:
-            previous_index = 0
-            next_index = index + 1
-        elif index == len(all_txt) - 1:
-            previous_index = index - 1
-            next_index = index
-        else:
-            previous_index = index - 1
-            next_index = index + 1
-        #弄完上面的下表，就检查循环到这篇文章没
-        if txt.txt_id == txt_id:
-            curr_txt = txt
-            #用enumerate的好处就在这里了，给all_txt的每一个对象弄一个顺序下标，而不用管pk
-            previous_txt = all_txt[previous_index]
-            next_txt = all_txt[next_index]
-            break
-
-
-    section_list = curr_txt.content.split('\n')
-
-    return render(request, 'legalfiles/detail.html',
-                  {
-                      'curr_txt': curr_txt,
-                      'section_list': section_list,
-                      'previous_txt': previous_txt,
-                      'next_txt': next_txt
-                  }
-                  )
-
-def test(request):
-    return render(request, 'legalfiles/test.html')
-
-class TagView(ListView  ):
+class IndexView(ListView):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
-
-    #有时候真的乱，这个查询对应标签的文本的功能不是应该写在业务层吗，但是教程就写在这里
-    #重写了父类方法
-    def get_queryset(self):
-        # #根据页面传递来的name查询到tag
-        # tag1 = get_object_or_404(Tag, name=self.kwargs.get('name1'))
-        # tag2 = get_object_or_404(Tag, name=self.kwargs.get('name2'))
-        # print(type(self.kwargs.get('name1')))
-        #
-        # #把有这个tag的文本返回
-        # return super(TagView, self).get_queryset().filter(tags=tag1).filter(tags=tag2)
-
-        ret = super(TagView, self).get_queryset()
-
-        if self.kwargs.get('name1')!=' ':
-          tag1 = get_object_or_404(Tag, name=self.kwargs.get('name1'))
-          ret=ret.filter(tags=tag1)
-        else:
-          pass
-
-        if self.kwargs.get('name2')!=' ':
-          tag2 = get_object_or_404(Tag, name=self.kwargs.get('name2'))
-          ret=ret.filter(tags=tag2)
-        else:
-          pass
-
-        if self.kwargs.get('name3')!=' ':
-          tag3 = get_object_or_404(Tag, name=self.kwargs.get('name3'))
-          ret=ret.filter(tags=tag3)
-        else:
-          pass
-
-        if self.kwargs.get('name4')!=' ':
-          tag4 = get_object_or_404(Tag, name=self.kwargs.get('name4'))
-          ret=ret.filter(tags=tag4)
-        else:
-          pass
-
-        if self.kwargs.get('name5')!=' ':
-          tag5 = get_object_or_404(Tag, name=self.kwargs.get('name5'))
-          ret=ret.filter(tags=tag5)
-        else:
-          pass
-
-        if self.kwargs.get('name6')!=' ':
-          tag6 = get_object_or_404(Tag, name=self.kwargs.get('name6'))
-          ret=ret.filter(tags=tag6)
-        else:
-          pass
-
-        if self.kwargs.get('name7')!=' ':
-          tag7 = get_object_or_404(Tag, name=self.kwargs.get('name7'))
-          ret=ret.filter(tags=tag7)
-        else:
-          pass
-
-        if self.kwargs.get('name8')!=' ':
-          tag8 = get_object_or_404(Tag, name=self.kwargs.get('name8'))
-          ret=ret.filter(tags=tag8)
-        else:
-          pass
-
-        return ret
-
-# def tag_admin(request,id):
-#     #删除这个标签
-#     deletetag.delete_tag(id)
-#     #跳回去标签管理页面
-#     return render(request, 'legalfiles/tag_admin.html')
-
-class TagAdmin(ListView):
-    model = Txt
-    template_name = 'legalfiles/tag_admin.html'
-    context_object_name = 'txts'
     paginate_by = 5
+    def get_queryset(self):
+        #MyTagsIndex.as_view()
+        return Txt.objects.filter(users_id=self.request.user)
 
     def get_context_data(self, **kwargs):
         """
@@ -369,9 +423,10 @@ class TagAdmin(ListView):
         在类视图中，这个需要传递的模板变量字典是通过 get_context_data 获得的，
         所以我们复写该方法，以便我们能够自己再插入一些我们自定义的模板变量进去。
         """
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['mytags'] = get_tags(get_mytags(self.request))
         # 首先获得父类生成的传递给模板的字典。
-        context = super(TagAdmin, self).get_context_data(**kwargs)
-
+        #context = super(IndexView, self).get_context_data(**kwargs)
         # 父类生成的字典中已有 paginator、page_obj、is_paginated 这三个模板变量，
         # paginator 是 Paginator 的一个实例，
         # page_obj 是 Page 的一个实例，

@@ -4,6 +4,7 @@ import legalfiles.views
 
 app_name = 'legalfiles'
 urlpatterns = [
+    #path(r'login/', legalfiles.views.login, name='login'),
     path(r'to_upload/', legalfiles.views.to_upload, name='to_upload'),
     path(r'process_file/', legalfiles.views.process_file, name='process_file'),
     path(r'to_process/', legalfiles.views.to_process, name='to_process'),

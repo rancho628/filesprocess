@@ -1,3 +1,4 @@
+
 {% load static %}
 {% load legalfiles_tags %}
 <!DOCTYPE html>
@@ -161,8 +162,7 @@
                             <div class="layui-col-md12" id="labelItem">
                                 <!--标签库-->
                                 <div class="label-item">
-                                    {% get_tags as tags_dic %}
-                                    {% for key,tags in tags_dic.items %}
+                                    {% for key,tags in mytags.items %}
                                     {{key}}:
                                     {% for t in tags %}
                                     <li data="{{t}}">
