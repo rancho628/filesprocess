@@ -1,5 +1,6 @@
 {% load static %}
 {% load legalfiles_tags %}
+{% if user.is_authenticated %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -159,6 +160,8 @@
                 </div>
             </div><!-- col-md-8 -->
         </div>
+        <p>你已登录，欢迎你：{{ user.username }}</a> <a href="{% url 'logout' %}">  logout</a></p>
+
     </header>
 </div>
 
@@ -189,8 +192,8 @@
                             <div class="layui-col-md12" id="labelItem">
                                 <!--标签库-->
                                 <div class="label-item">
-                                    {% get_tags as tags_dic %}
-                                    {% for key,tags in tags_dic.items %}
+
+                                    {% for key,tags in mytags.items %}
                                     {{key}}:
                                     {% for t in tags %}
                                     <li data="{{t}}">
@@ -331,3 +334,8 @@ $(function(){
 </script>
 </body>
 </html>
+{% else %}
+<script language="JavaScript">
+          self.location='/';
+</script>
+{% endif %}

@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'legalfiles.static.mymiddleware.SimpleMiddleware',
 ]
 
 ROOT_URLCONF = 'filesprocess.urls'
@@ -78,9 +79,9 @@ WSGI_APPLICATION = 'filesprocess.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangodatabase6',
+        'NAME': 'db3',
         'USER': 'root',
-        'PASSWORD': '123',
+        'PASSWORD': 'mint619',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
