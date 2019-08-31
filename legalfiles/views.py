@@ -61,8 +61,7 @@ def to_upload(request):
     return render(request, 'legalfiles/upload.html')
 
 def upload_file(request):
-    deletefiles()
-    deletefiles2txt()
+
     # if request.method == "POST":    # 请求方法为POST时，进行处理
     myFile = request.FILES.getlist("myfile", None)  # 获取上传的文件，如果没有文件，则默认为None
 
@@ -92,7 +91,7 @@ def process_file(request):
     legalfiles.operateobject.savetxt.save_txt(request)
 
     # 保存标签到数据库
-    legalfiles.operateobject.savetag.save_tag()
+    legalfiles.operateobject.savetag.save_tag(request)
     #
     legalfiles.operateobject.savetxttags.save_txttags(request)
     # 删除上传上来的文件和我们生成的txt文件
@@ -151,6 +150,7 @@ def test(request):
     return render(request, 'legalfiles/test.html')
 
 from xpinyin import Pinyin
+#把标签列表按字母排序
 def get_tags(tags):
     pin = Pinyin()
     ret={}
@@ -187,16 +187,16 @@ def get_tags(tags):
         ret[list[length-1][0][0]] = temp_list
     return ret
 
+#获取用户的标签
 def get_mytags(request):
     mytags = set()
     mytxts = Txt.objects.filter(users_id=request.user)
     for mytxt in mytxts:
-        # print(mytxt.txt_id)
-        # txt's tagsji
         txt_tag = Txt.objects.filter(txt_id=mytxt.txt_id).values_list("tags")
         for tag_id in txt_tag:
             # mytags_id.add(tag_id[0])
-            mytags.add(Tag.objects.get(id=tag_id[0]).name)
+            if tag_id[0]!=None :
+                mytags.add(Tag.objects.get(id=tag_id[0]).name)
     return mytags
 
 #search in input
@@ -261,12 +261,6 @@ class TagView(ListView):
         return ret
 
 
-# def tag_admin(request,id):
-#     #删除这个标签
-#     deletetag.delete_tag(id)
-#     #跳回去标签管理页面
-#     return render(request, 'legalfiles/tag_admin.html')
-
 class TagAdmin(ListView):
     model = Txt
     template_name = 'legalfiles/tag_admin.html'
@@ -274,7 +268,14 @@ class TagAdmin(ListView):
     paginate_by = 5
     def get_queryset(self):
 
+        if self.kwargs.get('tag_name')!=' ' or self.kwargs.get('txt_name')!=' ' :
+            if self.kwargs.get('txt_name') ==' ':
+                  deletetag.delete_tag(self.request,self.kwargs.get('tag_name'))
+            else :
+                deletetxttags.delete_txttags(self.request,self.kwargs.get('tag_name'),self.kwargs.get('txt_name'))
+
         return Txt.objects.filter(users_id=self.request.user)
+
     def get_context_data(self, **kwargs):
         """
         在视图函数中将模板变量传递给模板是通过给 render 函数的 context 参数传递一个字典实现的，
@@ -416,7 +417,10 @@ class IndexView(ListView):
     paginate_by = 5
     def get_queryset(self):
         #MyTagsIndex.as_view()
-        return Txt.objects.filter(users_id=self.request.user)
+
+             return Txt.objects.filter(users_id=self.request.user)
+
+
 
     def get_context_data(self, **kwargs):
         """

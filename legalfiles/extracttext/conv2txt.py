@@ -10,8 +10,8 @@ from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.converter import TextConverter, PDFPageAggregator
 from pdfminer.layout import LAParams
 from pdfminer.pdfparser import PDFParser
-#from pdfminer.pdfdocument import PDFDocument
-from pdfminer.pdfparser import PDFDocument
+from pdfminer.pdfdocument import PDFDocument
+# from pdfminer.pdfparser import PDFDocument
 from pdfminer.pdfdevice import PDFDevice
 #from pdfminer.pdfpage import PDFPage
 

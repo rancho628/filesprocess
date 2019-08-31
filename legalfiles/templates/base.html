@@ -145,7 +145,7 @@
                             <li class="cl-effect-11"><a href="{% url 'legalfiles:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toupload()" data-hover="上传">上传</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toprocess()" data-hover="处理">处理</a></li>
-                            <li class="cl-effect-11"><a href="{% url 'legalfiles:tag_admin' ' ' %}"  data-hover="标签管理">标签管理</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'legalfiles:tag_admin' ' ' ' ' %}"  data-hover="标签管理">标签管理</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -174,21 +174,6 @@
                 <div class="widget widget-tag-cloud">
                     <div class="panel-body" style="height: 700px; overflow-y:scroll">
                         <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
-<!--                            <div class="sidebar">-->
-<!--                                <h3 class="widget-title">标签</h3>-->
-<!--                                {% get_tags as tags_dic %}-->
-<!--                                <ul>-->
-<!--                                    {% for key,tags in tags_dic.items %}-->
-<!--                                    {{key}}:-->
-<!--                                    {% for t in tags %}-->
-<!--                                    <li>-->
-<!--                                        <a href="{% url 'legalfiles:tag' t t %}">{{t}}</a>-->
-<!--                                    </li>-->
-<!--                                    {% endfor %}-->
-<!--                                    <br>-->
-<!--                                    {% endfor %}-->
-<!--                                </ul>-->
-<!--                            </div>-->
                             <div class="layui-col-md12" id="labelItem">
                                 <!--标签库-->
                                 <div class="label-item">

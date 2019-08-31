@@ -6,12 +6,7 @@ from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-class Tag(models.Model):
 
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
 
 
 class User(AbstractUser):
@@ -20,6 +15,14 @@ class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         pass
 
+class Tag(models.Model):
+    #标签名字
+    name = models.CharField(max_length=100)
+    #用户一对多
+    users = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 class Txt(models.Model):
     # 文章的唯一ID
@@ -30,6 +33,7 @@ class Txt(models.Model):
     content = models.TextField()
     #文章标签，多对多
     tags = models.ManyToManyField(Tag, blank=True)
+    #用户，一对多
     users = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
