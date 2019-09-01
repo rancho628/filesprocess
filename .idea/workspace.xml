@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtxttag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_0apsa5du7wouzj87.seg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_36szfu09zpnb3s6l.seg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_7h2uyqfoqz1koo5z.seg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_8mrsu2c3ti1d18nh.seg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_WRITELOCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_i3dy02a54lzdic1b.seg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/_MAIN_109.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whoosh_index/_MAIN_51.toc" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +247,7 @@
       <workItem from="1567129291324" duration="26274000" />
       <workItem from="1567213916096" duration="13745000" />
       <workItem from="1567258278372" duration="5619000" />
-      <workItem from="1567302818066" duration="3904000" />
+      <workItem from="1567302818066" duration="4597000" />
     </task>
     <servers />
   </component>
