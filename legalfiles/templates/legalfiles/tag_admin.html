@@ -23,130 +23,6 @@
             color: red;
         }
     </style>
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-            color: #444;
-            background: #f2f2f2;
-        }
-
-        * {
-            padding: 0;
-            margin: 0;
-            border: 0;
-            list-style: none;
-            text-decoration: none;
-        }
-
-        .wrap {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .label-selected {
-            width: 100%;
-            min-height: 36px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            position: relative;
-        }
-
-        .cell {
-            display: block;
-            width: 90px;
-            height: 28px;
-            line-height: 28px;
-            border: 3px;
-            background: #009688;
-            color: #fff;
-            text-align: center;
-        }
-
-        .layui-btn {
-            height: 34px;
-        }
-
-        .label-selected li {
-            display: inline-block;
-            height: 25px;
-            line-height: 27px;
-            font-size: 1.2rem;
-            padding: 0 1rem;
-            border: 1px solid #e6e6e6;
-            border-radius: 2px;
-            cursor: pointer;
-            margin: 4px 2px;
-            color: #666;
-        }
-
-        #labelItem {
-            margin-bottom: 10px;
-            /*display: none;*/
-        }
-
-        .label-item {
-            border: 0.5px solid #e6e6e6;
-            padding: 7px;
-            border-radius: 0 1px 1px 0;
-            position: relative;
-            overflow: hidden;
-            background: #fff;
-        }
-
-        .label-item li {
-            display: inline-block;
-            height: 20px;
-            line-height: 20px;
-            font-size: 1.2rem;
-            padding: 0 1.1rem;
-            border: 1.2px solid #e6e6e6;
-            border-radius: 0.5px;
-            cursor: pointer;
-            margin-bottom: 2px;
-            margin-left: 2px;
-            color: #666;
-        }
-
-        .label-item .selected {
-            color: #ccc;
-        }
-
-        #txt_labelItem {
-            margin-bottom: 10px;
-            /*display: none;*/
-        }
-
-        .txt_label-item {
-            border: 0.5px solid #e6e6e6;
-            padding: 7px;
-            border-radius: 0 1px 1px 0;
-            position: relative;
-            overflow: hidden;
-            background: #fff;
-        }
-
-        .txt_label-item li {
-            display: inline-block;
-            height: 20px;
-            line-height: 20px;
-            font-size: 1.2rem;
-            padding: 0 1.1rem;
-            border: 1.2px solid #e6e6e6;
-            border-radius: 0.5px;
-            cursor: pointer;
-            margin-bottom: 2px;
-            margin-left: 2px;
-            color: #666;
-        }
-
-        .txt_label-item .selected {
-            color: #ccc;
-        }
-
-    </style>
 
     <!-- js -->
     <script src="{% static 'legalfiles/js/jquery-2.1.3.min.js' %}"></script>
@@ -155,6 +31,7 @@
     <script src="{% static 'legalfiles/js/modernizr.custom.js' %}"></script>
     <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="{% static 'legalfiles/js/layer.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/mycss1.css' %}">
 
 </head>
 <body>
@@ -226,13 +103,16 @@
                 </article>
 
                 <div class="txt_label-item">
-                {% get_txttags txt.txt_id as tags %}
-                {% for t in tags %}
-                <li data="{{ txt.title }}/{{t}}">
-                    <span>{{t}} x</span>
-                </li>
-                {% endfor %}
+                    {% get_txttags txt.txt_id as tags %}
+                    {% for t in tags %}
+                    <li data="{{ txt.title }}/{{t}}">
+                        <span>{{t}} x</span>
+                    </li>
+                    {% endfor %}
+                    <input type="text" class="text" name="text"/>
+                    <input type="button" class="button" data="{{ txt.title }}" value="添加" onclick="Jump()"/>
                 </div>
+
 
                 {% endfor %}
 
@@ -257,24 +137,35 @@
 </script>
 <script type="text/javascript">
     $(function () {
-
         //左边点击
         $(".label-item").on("click", "li", function () {
             var url = $(this).attr("data");
-
-            window.location.href = "/legalfiles/tag_admin/" + url;
-
+            window.location.href = "/legalfiles/tag_admin/" + "delete/"+url;
+        });
+    })
+    $(function () {
+        //文章标签点击
+        $(".txt_label-item").on("click", "li", function () {
+            var url = $(this).attr("data");
+            window.location.href = "/legalfiles/tag_admin/"+ "delete/" + url;
         });
     })
 
-    $(function () {
 
-        //左边点击
-        $(".txt_label-item").on("click", "li", function () {
+    $(function () {
+        $(".button").on("click", function () {
             var url = $(this).attr("data");
 
-            window.location.href = "/legalfiles/tag_admin/" + url ;
+            var newtags = document.getElementsByName("text");
+            var newtag='';
+            for (var i = 0, j = newtags.length; i < j; i++) {
+                if(newtags[i].value!=''){
+                    newtag=newtags[i].value;
+                    break;
+                }
+            }
 
+            window.location.href = "/legalfiles/tag_admin/" + "add/"+ url + "/"+newtag ;
         });
     })
 </script>
