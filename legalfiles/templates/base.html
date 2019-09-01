@@ -39,88 +39,8 @@
 
     </script>
 
+    <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/mycss.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'legalfiles/css/layui.css' %}">
-    <style type="text/css">
-		body{
-			padding:0;
-			margin:0;
-			color:#444;
-			background:#f2f2f2;
-		}
-		*{
-			padding:0;
-			margin:0;
-			border:0;
-			list-style: none;
-			text-decoration: none;
-		}
-		.wrap{
-			width:100%;
-			max-width: 1200px;
-			margin:0 auto;
-		}
-		.label-selected{
-			width: 100%;
-			min-height:36px;
-			margin:10px 0;
-			border:1px solid #ccc;
-			background-color: #fff;
-			position: relative;
-		}
-		.cell{
-			display: block;
-			width:90px;
-			height:28px;
-			line-height: 28px;
-			border:3px;
-			background:#009688;
-			color:#fff;
-			text-align: center;
-		}
-		.layui-btn{
-		    height: 34px;
-		}
-		.label-selected li {
-		    display: inline-block;
-		    height: 25px;
-		    line-height: 27px;
-		    font-size: 1.2rem;
-		    padding: 0 1rem;
-		    border: 1px solid #e6e6e6;
-		    border-radius: 2px;
-		    cursor: pointer;
-		    margin: 4px 2px;
-		    color: #666;
-		}
-		#labelItem{
-			margin-bottom: 10px;
-			/*display: none;*/
-		}
-		.label-item {
-		    border: 0.5px solid #e6e6e6;
-		    padding: 7px;
-		    border-radius: 0 1px 1px 0;
-		    position: relative;
-		    overflow: hidden;
-		    background: #fff;
-		}
-		.label-item li {
-		    display: inline-block;
-		    height: 20px;
-		    line-height: 20px;
-		    font-size: 1.2rem;
-		    padding: 0 1.1rem;
-		    border: 1.2px solid #e6e6e6;
-		    border-radius: 0.5px;
-		    cursor: pointer;
-		    margin-bottom: 2px;
-		    margin-left: 2px;
-		    color: #666;
-		}
-		.label-item .selected{
-			color:#ccc;
-		}
-    </style>
 
 </head>
 <body>
@@ -129,7 +49,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <h1><a href="">文本处理</a></h1>
+                    <h1><a href="{% url 'legalfiles:index' %}">文本处理</a></h1>
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -145,7 +65,7 @@
                             <li class="cl-effect-11"><a href="{% url 'legalfiles:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toupload()" data-hover="上传">上传</a></li>
                             <li class="cl-effect-11"><a href="" onclick="toprocess()" data-hover="处理">处理</a></li>
-                            <li class="cl-effect-11"><a href="{% url 'legalfiles:tag_admin' ' ' ' ' %}"  data-hover="标签管理">标签管理</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'legalfiles:tag_admin' ' ' ' ' ' ' %}"  data-hover="标签管理">标签管理</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -232,17 +152,6 @@
 <script type="text/javascript" src="{% static 'legalfiles/js/layer.js' %}"></script>
 <script type="text/javascript">
 $(function(){
-  $(".show-labelitem").on("click",function(){
-    $(this).hide();
-    $(".hide-labelitem").show();
-    $("#labelItem").show();
-  });
-
-  $(".hide-labelitem").on("click",function(){
-    $(this).hide();
-    $(".show-labelitem").show();
-    $("#labelItem").hide();
-  });
 
   //侧边标签点击
   $(".label-item").on("click","li",function(){
@@ -309,7 +218,6 @@ $(function(){
   		return false;
   	}else{
 <!--		layer.msg("标签内容为:"+$("input[name='label']").val());-->
-
         window.location.href="/legalfiles/tag/"+$("input[name='label']").val();
   	}
   })

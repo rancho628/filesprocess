@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="" />
+    <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtxttag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +246,8 @@
       <workItem from="1566397550358" duration="6761000" />
       <workItem from="1567129291324" duration="26274000" />
       <workItem from="1567213916096" duration="13745000" />
+      <workItem from="1567258278372" duration="5619000" />
+      <workItem from="1567302818066" duration="3904000" />
     </task>
     <servers />
   </component>
