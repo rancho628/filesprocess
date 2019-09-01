@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
