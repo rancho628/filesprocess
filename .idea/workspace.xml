@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/operateobject/addtxttag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legalfiles/static/legalfiles/css/mycss1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/legalfiles/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,6 +250,7 @@
       <workItem from="1567213916096" duration="13745000" />
       <workItem from="1567258278372" duration="5619000" />
       <workItem from="1567302818066" duration="3904000" />
+      <workItem from="1567311802656" duration="834000" />
     </task>
     <servers />
   </component>
