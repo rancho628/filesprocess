@@ -142,5 +142,5 @@ HAYSTACK_CONNECTIONS = {
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     },
 }
-HAYSTACK_SEARCH_RESULTS_PER_PAGE = 5
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 12
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'

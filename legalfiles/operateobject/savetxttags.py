@@ -16,7 +16,7 @@ def save_txttags(request):
        #每个txt有自己的标签字典，tag是一个字典
        for t in tag:
            #标签拿出来（肯定有，刚放进去），拿出来是为了拿到它的主键
-           obj_tag = Tag.objects.get(name=t)
+           obj_tag = Tag.objects.get(name=t,users=request.user)
            #这个会自动去重复的，如果里面有文章id和标签id一样的数据，就不会加了
            obj_txt.tags.add(obj_tag.id)
 

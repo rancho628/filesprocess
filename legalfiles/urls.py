@@ -21,6 +21,7 @@ urlpatterns = [
     path(r'tag/<name1>/<name2>/<name3>/<name4>/<name5>/<name6>/<name7>/<name8>/', legalfiles.views.TagView.as_view(), name='tag'),#(?P<name>[0-9]+)
     path(r'detail/<int:txt_id>', legalfiles.views.detail, name='detail'),
     path(r'test/', legalfiles.views.test, name='test'),
-    path(r'tag_admin/<id>', legalfiles.views.TagAdmin.as_view(), name='tag_admin'),
+    # path(r'tag_admin/<tag_name>/', legalfiles.views.TagAdmin.as_view(), name='tag_admin'),
+    path(r'tag_admin/<status>/<txt_name>/<tag_name>/', legalfiles.views.TagAdmin.as_view(), name='tag_admin'),
     path(r'register/', legalfiles.views.register, name='register'),
 ]

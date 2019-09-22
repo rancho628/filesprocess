@@ -15,7 +15,8 @@ def get_txttags(mytxt_id):
     txt_tag = Txt.objects.filter(txt_id=mytxt_id).values_list("tags")
     for tag_id in txt_tag:
         # mytags_id.add(tag_id[0])
-        txttags.append(Tag.objects.get(id=tag_id[0]).name)
+        if tag_id[0]!=None:
+         txttags.append(Tag.objects.get(id=tag_id[0]).name)
     return txttags
 
 
