@@ -24,7 +24,7 @@ SECRET_KEY = 'dr=#vfe=-t0bf!cypve7gs@9pb1!!pxvx+1xf57#p+d22lre!s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.filesprocess  .com']
 
 # Application definition
 
@@ -122,6 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 AUTH_USER_MODEL = 'legalfiles.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
