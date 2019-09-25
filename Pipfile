@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+markdown = "*"
+gunicorn = "*"
+pymysql = "*"
+haystack = "*"
+django-haystack = "*"
+jieba = "*"
+docx2txt = "*"
+pdfminer = "*"
+xpinyin = "*"
+pdfminer3k = "*"
+nltk = "*"
+chineseanalyzer = "*"
+whoosh = "*"
+
+[requires]
+python_version = "3.6"
