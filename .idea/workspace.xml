@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be97909-0420-44fb-a4ee-5d58edbf5dad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/333333333333333333" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/filesprocess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/filesprocess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filesprocess/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/filesprocess/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filesprocess/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/filesprocess/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/operateobject/deletetag.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/operateobject/deletetag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/operateobject/deletetxttags.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/operateobject/deletetxttags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/operateobject/savetag.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/operateobject/savetag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/operateobject/savetxttags.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/operateobject/savetxttags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/legalfiles/tag_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_change_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templates/registration/password_reset_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/templatetags/legalfiles_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/templatetags/legalfiles_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legalfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/legalfiles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_36szfu09zpnb3s6l.seg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_7h2uyqfoqz1koo5z.seg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_8mrsu2c3ti1d18nh.seg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whoosh_index/MAIN_i3dy02a54lzdic1b.seg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whoosh_index/_MAIN_109.toc" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +24,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="e#60#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2222222222222222222222">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/333333333333333333">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -99,8 +87,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="387" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="386" />
     <option name="y" value="62" />
     <option name="width" value="1420" />
     <option name="height" value="980" />
@@ -135,6 +123,18 @@
               <item name="filesprocess" type="b2602c69:ProjectViewProjectNode" />
               <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
               <item name="legalfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="extracttext" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filesprocess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
+              <item name="legalfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filesprocess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filesprocess" type="462c0819:PsiDirectoryNode" />
+              <item name="legalfiles" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -162,7 +162,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mint/anaconda3/bin/conda" />
+    <property name="last_opened_file_path" value="C:/mint/anaconda3/bin/conda" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -379,9 +379,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="387" y="62" width="1420" height="980" extended-state="1" />
+    <frame x="-7" y="-7" width="1933" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925262" visible="true" weight="0.28790087" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925262" visible="true" weight="0.10215903" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5007474" side_tool="true" weight="0.1490258" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -392,7 +392,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997367" weight="0.20822942" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49921012" weight="0.219935" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" visible="true" weight="0.37910798" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997367" visible="true" weight="0.23618636" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007899" side_tool="true" weight="0.31744313" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -473,13 +473,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../mint/anaconda3/lib/python3.6/site-packages/django/template/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="527" selection-start-line="527" selection-end-line="527" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/mint/anaconda3/lib/python3.6/site-packages/django/template/base.py" />
     <entry file="file://$PROJECT_DIR$/legalfiles/templatetags/legalfiles_tags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -549,13 +543,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../mint/anaconda3/lib/python3.6/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="411" selection-start-line="411" selection-end-line="411" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/mint/anaconda3/lib/python3.6/site-packages/django/db/models/query.py" />
     <entry file="file://$PROJECT_DIR$/legalfiles/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="985">
@@ -587,10 +575,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2222222222222222222222">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/333333333333333333">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/legalfiles/extracttext/conv2txt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        <state relative-caret-position="408">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#60#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
