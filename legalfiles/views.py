@@ -204,6 +204,7 @@ class TagView(ListView):
     model = Txt
     template_name = 'legalfiles/index.html'
     context_object_name = 'txts'
+    paginate_by =7
 
     #有时候真的乱，这个查询对应标签的文本的功能不是应该写在业务层吗，但是教程就写在这里
     #重写了父类方法

@@ -24,7 +24,7 @@ SECRET_KEY = 'dr=#vfe=-t0bf!cypve7gs@9pb1!!pxvx+1xf57#p+d22lre!s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.filesprocess  .com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.filesprocess.com','47.96.176.58']
 
 # Application definition
 
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'filesprocess.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db3',
+        'NAME': 'djangodatabase',
         'USER': 'root',
-        'PASSWORD': 'mint619',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }

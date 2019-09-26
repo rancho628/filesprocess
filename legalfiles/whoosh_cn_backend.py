@@ -10,8 +10,8 @@ import threading
 import warnings
 #总感觉这两个分词都有点问题，老是需要rebuil_index（跟数据库数据无关）
 #如果又有问题，直接重新rebuil_index
-from jieba.analyse import ChineseAnalyzer
-#from legalfiles.ChineseAnalyzer import ChineseAnalyzer
+#from jieba.analyse import ChineseAnalyzer
+from legalfiles.ChineseAnalyzer import ChineseAnalyzer
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured

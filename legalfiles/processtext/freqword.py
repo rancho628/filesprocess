@@ -9,13 +9,13 @@ from legalfiles.processtext.cutandremove import seg_doc
 from collections import Counter
 
 #解决中文显示
-import matplotlib
+#import matplotlib
 # （1）查看当前使用字体格式
 # from matplotlib.font_manager import findfont, FontProperties
 # print(findfont(FontProperties(family=FontProperties().get_family())))
 # （2）在C:\Windows\Fonts查找中文字体SimHei.ttf，并将其复制到../mpl-data/font/ttf文件夹下面
 # (3) 设置使用字体
-matplotlib.rcParams['font.sans-serif'] = 'SimHei'
+#matplotlib.rcParams['font.sans-serif'] = 'SimHei'
 
 
 # 利用nltk进行词频特征统计
