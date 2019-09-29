@@ -13,7 +13,7 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfparser import PDFParser
 #from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdfparser import PDFDocument
-#just for tese
+
 
 
 
