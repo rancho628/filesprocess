@@ -10,7 +10,7 @@ register = template.Library()
 
 
 @register.simple_tag
-#返回对应文章的所有标签
+#返回对应文章的所有标签.
 def get_txttags(mytxt_id):
     txttags=[]
     txt_tag = Txt.objects.filter(txt_id=mytxt_id).values_list("tags")
